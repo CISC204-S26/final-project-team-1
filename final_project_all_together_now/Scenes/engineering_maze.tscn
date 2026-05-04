@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b20t4u6vvbc5n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_myasq"]
+size = Vector3(401, 1, 300)
+
+[node name="Engineering Maze" type="Node3D" unique_id=1354805339]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=995277518]
+transform = Transform3D(2.16, 0, 0, 0, 1, 0, 0, 0, 2.64, -1, 0, -3)
+
+[node name="Floor shape" type="CollisionShape3D" parent="Floor" unique_id=1843189367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+shape = SubResource("BoxShape3D_myasq")

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c1cl1q0ghpi6f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oh6kn"]
+size = Vector3(14.93396, 5.901123, 1)
+
+[node name="Wall" type="StaticBody3D" unique_id=1261621636]
+
+[node name="wall shape" type="CollisionShape3D" parent="." unique_id=1995141699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.303406, 2.4505615, 0)
+shape = SubResource("BoxShape3D_oh6kn")
+
+[node name="Wall sprite" type="Sprite3D" parent="." unique_id=1694454665]
