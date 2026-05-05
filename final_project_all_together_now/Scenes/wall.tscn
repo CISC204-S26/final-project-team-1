@@ -6,6 +6,8 @@ size = Vector3(14.93396, 5.901123, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b57mv"]
 albedo_color = Color(0.87058824, 0.5803922, 0.043137256, 1)
 metallic = 1.0
+metallic_specular = 1.0
+clearcoat_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_d155t"]
 material = SubResource("StandardMaterial3D_b57mv")
