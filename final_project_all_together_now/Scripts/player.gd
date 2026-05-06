@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@onready var turn = $Node3D/TurnCtrl
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -11,6 +12,11 @@ var target_velocity = Vector3.ZERO
 
 
 func _physics_process(delta: float):
+	if Input.is_action_just_pressed("camera_left"):
+		turn.turn_left()
+
+	if Input.is_action_just_pressed("camera_right"):
+		turn.turn_right()
 	#local variable to store input direction
 	var direction = Vector3.ZERO
 	

@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://ugepxpgrh1y6"]
 
 [ext_resource type="Script" uid="uid://xij0hn2mu28" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://boha36cki4afj" path="res://turn_ctrl.gd" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
 height = 2.168457
+
+[sub_resource type="PrismMesh" id="PrismMesh_cvnsp"]
 
 [node name="Player" type="CharacterBody3D" unique_id=868634589]
 script = ExtResource("1_v0iea")
@@ -12,7 +15,21 @@ script = ExtResource("1_v0iea")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.084228516, 0)
 shape = SubResource("CapsuleShape3D_f60y1")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=2005864278]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56848454, -0.39626777)
-
 [node name="Character" type="Node3D" parent="." unique_id=233434363]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=937174203]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, 1.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=2005864278]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -50)
+projection = 1
+current = true
+size = 10.0
+
+[node name="TurnCtrl" type="Node" parent="Node3D" unique_id=1379774419 node_paths=PackedStringArray("target")]
+script = ExtResource("2_cvnsp")
+target = NodePath("..")
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=983197515]
+mesh = SubResource("PrismMesh_cvnsp")
