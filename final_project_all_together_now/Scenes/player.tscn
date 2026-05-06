@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ugepxpgrh1y6"]
 
 [ext_resource type="Script" uid="uid://xij0hn2mu28" path="res://Scripts/player.gd" id="1_v0iea"]
-[ext_resource type="Script" uid="uid://boha36cki4afj" path="res://turn_ctrl.gd" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
 height = 2.168457
