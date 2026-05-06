@@ -21,7 +21,6 @@ offset_right = 57.776
 offset_bottom = 80.10397
 grow_horizontal = 2
 grow_vertical = 2
-text = "Start? "
 
 [node name="Wallpaper" type="ColorRect" parent="." unique_id=83889957]
 offset_right = 1280.0
