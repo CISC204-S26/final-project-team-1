@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b04x57uy3fuwt"]
+
+[ext_resource type="Texture2D" uid="uid://dpbjmg22r8h3n" path="res://Assets/Art/Shamscum logo.png" id="1_2fnwn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txiv3"]
+albedo_color = Color(0.41568628, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1sv8"]
+albedo_color = Color(0.7514611, 0.751461, 0.7514612, 1)
+metallic = 1.0
+clearcoat_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_nhx8s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h0v1d"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="UsbStick" type="CSGSphere3D" unique_id=694043513]
+transform = Transform3D(1, 0, 0, 0, 6.8601923, 0, 0, 0, 2.2186542, 0, 0, 0)
+material = SubResource("StandardMaterial3D_txiv3")
+
+[node name="UsbEnd" type="CSGBox3D" parent="." unique_id=1627068203]
+transform = Transform3D(0.83678615, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3764627, 0)
+size = Vector3(0.7184868, 0.24884033, 0.5170259)
+material = SubResource("StandardMaterial3D_r1sv8")
+
+[node name="UsbLogo" type="CSGMesh3D" parent="." unique_id=456316694]
+transform = Transform3D(0.119006634, 0, 0, 0, 0.09759004, 0, 0, 0, 0.44364065, 0.41942888, 0.13428812, 0)
+mesh = SubResource("BoxMesh_nhx8s")
+material = SubResource("StandardMaterial3D_h0v1d")
+
+[node name="Shamscum" type="Sprite3D" parent="UsbLogo" unique_id=1833469969]
+transform = Transform3D(-1.7928864e-09, 0, 1, 0, 0.13639109, 0, -0.041016415, 0, -4.371139e-08, 0.51405334, 0, 0)
+texture = ExtResource("1_2fnwn")
