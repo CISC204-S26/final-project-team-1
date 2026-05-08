@@ -2,6 +2,8 @@
 
 [ext_resource type="FontFile" uid="uid://xfhm4sbqqmn1" path="res://Assets/fonts/connection_ii/ConnectionII.otf" id="1_dbpbn"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbpbn"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbpbn"]
 bg_color = Color(0.7750634, 0.7750634, 0.7750633, 1)
 border_width_left = 6
@@ -16,6 +18,25 @@ border_blend = true
 [node name="BlueStartupScreen" type="TextureRect" parent="." unique_id=1123880983]
 offset_right = 1280.0
 offset_bottom = 720.0
+
+[node name="TextEdit" type="TextEdit" parent="BlueStartupScreen" unique_id=1507141689]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.0
+offset_top = -260.0
+offset_right = 247.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dbpbn")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dbpbn")
+text = "Welcome!"
 
 [node name="Button" type="Button" parent="BlueStartupScreen" unique_id=709429859]
 top_level = true
@@ -35,7 +56,9 @@ theme_override_colors/font_color = Color(0.111196615, 0.11119693, 0.11119672, 1)
 theme_override_fonts/font = ExtResource("1_dbpbn")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_dbpbn")
+action_mode = 0
 text = "Start?"
+icon_alignment = 1
 
 [node name="Wallpaper" type="ColorRect" parent="." unique_id=83889957]
 offset_right = 1280.0

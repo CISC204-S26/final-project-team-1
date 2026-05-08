@@ -13,6 +13,11 @@ config_version=5
 config/name="Final Project All Together Now"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Assets/Art/icon.svg"
+run/size/viewport_width=1152
+
+[display]
+
+window/size/viewport_width=1157
 
 [filesystem]
 
