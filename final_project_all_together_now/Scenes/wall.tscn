@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://c1cl1q0ghpi6f"]
 
+[ext_resource type="Texture2D" uid="uid://ifpnr4r810v1" path="res://Assets/Textures/corrugated_iron_02_4k.blend/textures/corrugated_iron_02_disp_4k.png" id="1_yjehn"]
+[ext_resource type="Texture2D" uid="uid://bmosc5ouwbe8a" path="res://Assets/Textures/corrugated_iron_02_4k.blend/textures/corrugated_iron_02_diff_4k.jpg" id="2_m8ojb"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_oh6kn"]
 size = Vector3(14.93396, 5.901123, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b57mv"]
-albedo_color = Color(0.87058824, 0.5803922, 0.043137256, 1)
+albedo_color = Color(1.1172874, 0.7467112, 0.15056698, 1)
+albedo_texture = ExtResource("1_yjehn")
 metallic = 1.0
 metallic_specular = 1.0
+metallic_texture = ExtResource("2_m8ojb")
 clearcoat_enabled = true
+uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_d155t"]
 material = SubResource("StandardMaterial3D_b57mv")
