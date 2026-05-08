@@ -1,48 +1,55 @@
 extends CharacterBody3D
 
-@onready var turn = $Node3D/TurnCtrl
+@onready var camera_pivot = $CameraPivot
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+@onready var turn = $CameraPivot/TurnCtrl
 
-@export var speed = 2
-@export var fall_acceleration = 10
+@export var move_speed = 500
+@export var jump_impulse = 15
 
-var target_velocity = Vector3.ZERO
+@export var gravity = -30
 
-
-func _physics_process(delta: float):
+func _physics_process(delta):
+	move_and_slide() ## Move and Slide
+	
 	if Input.is_action_just_pressed("camera_left"):
 		turn.turn_left()
 
 	if Input.is_action_just_pressed("camera_right"):
 		turn.turn_right()
-	#local variable to store input direction
-	var direction = Vector3.ZERO
 	
-	##Handles movement 
-	if Input.is_action_pressed("moveRight"):
-		direction.x += 1
-	if Input.is_action_pressed("moveLeft"): 
-		direction.x -= 1
-	if Input.is_action_pressed("moveBack"): 
-		direction.z += 1
-	if Input.is_action_pressed("moveForward"): 
-		direction.z -= 1
-
-	if direction != Vector3.ZERO: 
-		direction = direction.normalized()
-		$Character.basis = Basis.looking_at(direction)
+	## Gets Movement Input ########################################################################
+	var input_vector := Vector2(
+		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
+		Input.get_action_strength("move_forward") - Input.get_action_strength("move_back")
+	)
+	
+	
+	if input_vector != Vector2.ZERO: ## If move input detected
+		input_vector = input_vector.normalized()
 		
-	#ground velocity
-	target_velocity.x = direction.x * speed
-	target_velocity.z = direction.z * speed
-
-		#vertical velocity
-	if not is_on_floor(): 
-		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
+		## Orients directions based on camera rotation ############################################
+		var camera_basis = camera_pivot.global_transform.basis
 		
-		#moving the character
-		velocity = target_velocity
-		move_and_slide()
+		var forward = camera_basis.z
+		forward = forward.normalized()
 		
+		var right = -camera_basis.x
+		right = right.normalized()
+		
+		## Moves according to new orientation and given input #####################################
+		var move_direction = (input_vector.x * right + input_vector.y * forward).normalized()
+		
+		velocity.x = move_direction.x * move_speed * delta
+		velocity.z = move_direction.z * move_speed * delta
+	
+	else: ## Dont move if not moving ##############################################################
+		velocity.x = 0
+		velocity.z = 0
+	
+	velocity.y += gravity * delta
+	
+	var is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
+	
+	if is_starting_jump:
+		velocity.y += jump_impulse

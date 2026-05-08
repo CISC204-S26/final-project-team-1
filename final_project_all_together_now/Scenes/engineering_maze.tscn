@@ -81,6 +81,7 @@ mesh = SubResource("BoxMesh_qfcyl")
 [node name="Walls" type="Node" parent="." unique_id=1166597071]
 
 [node name="OuterWalls" type="CSGCombiner3D" parent="Walls" unique_id=1697659566]
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls/OuterWalls" unique_id=810393033]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -27.388, 0.737, 1.061)
@@ -103,6 +104,7 @@ size = Vector3(55.797, 2.158, 1.127)
 material = SubResource("StandardMaterial3D_ousgv")
 
 [node name="StartWalls" type="CSGCombiner3D" parent="Walls" unique_id=10766285]
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls/StartWalls" unique_id=1440287789]
 transform = Transform3D(1, 0, 0, 0, 1.1435717, 0, 0, 0, 1, 25.430931, 0.7374556, 16.521732)
