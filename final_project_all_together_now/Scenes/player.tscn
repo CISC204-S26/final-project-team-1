@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xij0hn2mu28" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cwnvorotwdi0" path="res://Assets/Art/Chefborg.png" id="3_6t5aa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
 height = 2.168457
@@ -32,4 +33,10 @@ target = NodePath("..")
 metadata/_custom_type_script = "uid://boha36cki4afj"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=983197515]
+visible = false
 mesh = SubResource("PrismMesh_cvnsp")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=847748010]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+billboard = 2
+texture = ExtResource("3_6t5aa")
