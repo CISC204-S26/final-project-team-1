@@ -3,35 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://b04x57uy3fuwt" path="res://Scenes/usb_stick.tscn" id="1_n0xin"]
 [ext_resource type="PackedScene" uid="uid://ugepxpgrh1y6" path="res://Scenes/player.tscn" id="1_nl3pl"]
 [ext_resource type="Texture2D" uid="uid://b8s1ptfp0snli" path="res://Assets/Textures/blue_metal_plate_4k.blend/textures/blue_metal_plate_diff_4k.jpg" id="1_qfcyl"]
-[ext_resource type="AudioStream" uid="uid://dq4nxpevyl4be" path="res://Assets/Audio/BreakChef2 - 5:10:26, 8.52 PM.mp3" id="2_ousgv"]
+[ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uc55"]
-albedo_color = Color(0.87058824, 0.5803922, 0.043137256, 1)
-metallic = 1.0
-metallic_specular = 1.0
-clearcoat_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfcyl"]
-albedo_color = Color(0.87058824, 0.5803922, 0.043137256, 1)
-metallic = 1.0
-clearcoat_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nl3pl"]
-albedo_color = Color(0.87058824, 0.5803922, 0.043137256, 1)
-metallic = 1.0
-clearcoat_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ousgv"]
-albedo_color = Color(0.87058824, 0.5803922, 0.043137256, 1)
-metallic = 1.0
-clearcoat_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_myasq"]
 size = Vector3(873.156, 1, 1349.1193)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0xin"]
-albedo_color = Color(0.38431373, 0.8352941, 0.4862745, 1)
+albedo_color = Color(0.23529412, 0.56078434, 0.19215687, 0.5372549)
 albedo_texture = ExtResource("1_qfcyl")
 normal_enabled = true
 uv1_scale = Vector3(50, 50, 50)
@@ -39,28 +18,11 @@ uv1_scale = Vector3(50, 50, 50)
 [sub_resource type="BoxMesh" id="BoxMesh_qfcyl"]
 material = SubResource("StandardMaterial3D_n0xin")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2iuu"]
-albedo_color = Color(0.87058824, 0.5803922, 0.043137256, 1)
-metallic = 1.0
-clearcoat_enabled = true
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3yqwl"]
 albedo_color = Color(0.90588236, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nl3pl"]
 size = Vector3(1.6019897, 1.9404297, 1.3022461)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig8kq"]
-albedo_color = Color(0.046542805, 0.046542805, 0.046542805, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6bg5"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gh04y"]
-albedo_color = Color(0.55455405, 0.554554, 0.5545539, 1)
-metallic = 1.0
-clearcoat_enabled = true
-clearcoat_roughness = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10on7"]
 transparency = 1
@@ -75,14 +37,16 @@ backlight = Color(0.18932319, 0.6652849, 2.117753e-06, 1)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1597756771]
 transform = Transform3D(-0.9963407, 0.085438736, -0.0023450097, -0.0017340083, 0.007224848, 0.9999724, 0.08545332, 0.99631727, -0.0070502586, 0, 132.70953, 0)
-light_color = Color(0, 0.77680004, 0.84946877, 1)
+light_color = Color(0.96, 0.96, 0.96, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=868634589 instance=ExtResource("1_nl3pl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.206839, 0.13112628, 24.026283)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player" unique_id=1510420508]
-stream = ExtResource("2_ousgv")
 volume_db = 5.234
 autoplay = true
 
@@ -94,22 +58,22 @@ use_collision = true
 [node name="CSGBox3D" type="CSGBox3D" parent="Base/OuterWalls" unique_id=810393033]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -27.388, 0.737, 1.061)
 size = Vector3(1.127, 2.158, 50.625)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Base/OuterWalls" unique_id=1796569857]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 28.483398, 0.737, 1.059)
 size = Vector3(1.127, 2.158, 50.611)
-material = SubResource("StandardMaterial3D_qfcyl")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Base/OuterWalls" unique_id=2112132455]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 0.02, 0.737, -23.746)
 size = Vector3(55.758, 2.158, 1.127)
-material = SubResource("StandardMaterial3D_nl3pl")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Base/OuterWalls" unique_id=1712489426]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 0.002, 0.737, 26.938166)
 size = Vector3(55.797, 2.158, 1.127)
-material = SubResource("StandardMaterial3D_ousgv")
+material = ExtResource("2_ousgv")
 
 [node name="Floor" type="StaticBody3D" parent="Base" unique_id=995277518]
 transform = Transform3D(0.07070005, 0, 0, 0, 0.13150585, 0, 0, 0, 0.07070005, 0, -1.6247332, 0)
@@ -130,107 +94,107 @@ use_collision = true
 [node name="CSGBox3D" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1440287789]
 transform = Transform3D(1, 0, 0, 0, 1.1435717, 0, 0, 0, 1, 25.430931, 0.7374556, 16.521732)
 size = Vector3(1.1274414, 2.1583252, 2.8115845)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1826430040]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 22.848, 0.737, 16.52)
 size = Vector3(1.127, 2.158, 2.812)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1860324129]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 20.175, 0.737, 16.52)
 size = Vector3(1.127, 2.158, 2.812)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q1/StartWalls" unique_id=630523313]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, 18.212, 0.737, 18.499)
 size = Vector3(1.127, 2.158, 2.812)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Q1/StartWalls" unique_id=701502073]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, 18.21, 0.737, 20.987)
 size = Vector3(1.127, 2.158, 2.812)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1506986663]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, 18.21, 0.737, 23.502)
 size = Vector3(1.127, 2.158, 2.812)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1602111527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.72723, 0.73004055, 5.3172607)
 size = Vector3(10.315918, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="Q1/StartWalls" unique_id=2088386922]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.033356, 0.73004055, 14.404636)
 size = Vector3(19.15448, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1422979235]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.165348, 0.73004055, 23.488905)
 size = Vector3(13.28215, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Q1/StartWalls" unique_id=722621575]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.1221, 0.73004055, 11.028038)
 size = Vector3(20.917664, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Q1/StartWalls" unique_id=484402681]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25.417685, 0.73004055, 9.023108)
 size = Vector3(12.178467, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1863657125]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.829939, 0.73004055, 11.859167)
 size = Vector3(6.5063477, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1213448845]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.229315, 0.73004055, 21.001383)
 size = Vector3(3.2191772, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1274113034]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.188675, 0.73004055, 13.23258)
 size = Vector3(3.7595215, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Q1/StartWalls" unique_id=860743690]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.727627, 0.73004055, 4.825886)
 size = Vector3(3.7595215, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Q1/StartWalls" unique_id=2090924374]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.758183, 0.73004055, 3.4366746)
 size = Vector3(12.270386, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="Q1/StartWalls" unique_id=310843842]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.470581, 0.73004055, 9.100222)
 size = Vector3(9.695572, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="Q1/StartWalls" unique_id=354833773]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.750788, 0.73004055, 9.0930805)
 size = Vector3(5.7542152, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1784983619]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.412034, 0.73004055, 12.971276)
 size = Vector3(5.7542152, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="Q1/StartWalls" unique_id=1866809146]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.567112, 0.73004055, 18.342123)
 size = Vector3(4.7237873, 2.460083, 3.645996)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Q1/StartWalls" unique_id=411148077]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.797192, 0.73004055, 11.873413)
 size = Vector3(3.7595215, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="Node" type="Node" parent="Q1" unique_id=1403261081]
 
@@ -257,7 +221,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.069122314, -0.47021484, 0.
 shape = SubResource("BoxShape3D_nl3pl")
 
 [node name="Button3" type="CSGBox3D" parent="Q1/Node" unique_id=1585672469]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77122, 0.9382496, 17.45941)
+transform = Transform3D(0.008394933, 0, 0.9999648, 0, 1, 0, -0.9999648, 0, 0.008394933, 2.1312594, 0.9382496, 5.9480314)
 size = Vector3(0.34594727, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
 
@@ -280,87 +244,87 @@ size = Vector3(28.450562, 1, 26.915894)
 [node name="CSGBox3D" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=2032611036]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 0, 0.737, 15.583344)
 size = Vector3(1.127, 2.158, 21.549376)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1879037187]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 0, 0.737, -19.449432)
 size = Vector3(1.127, 2.158, 9.591547)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1079139203]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 0, 0.737, -4.8964825)
 size = Vector3(1.127, 2.158, 16.24145)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1904028585]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -5.1690845, 0.737, 0)
 size = Vector3(39.604156, 2.158, 1.127)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=2058624775]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, 22.077251, 0.737, 0)
 size = Vector3(11.666742, 2.158, 1.127)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=936759340]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -22.770164, 0.737, 12.911514)
 size = Vector3(10.222895, 2.158, 1.127)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1806234424]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -5.689618, 0.737, 12.91)
 size = Vector3(12.467955, 2.158, 1.127)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1850615658]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -14.341737, 0.7369995, 12.658615)
 size = Vector3(1.127, 2.158, 20.043818)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=2081832856]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -6.5038023, 0.737, 6.0663705)
 size = Vector3(3.2553945, 2.158, 7.3186007)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=85745620]
 transform = Transform3D(1, 0, 0, 0, 1.14, 0, 0, 0, 1, -6.9866867, 0.737, 19.378103)
 size = Vector3(0.454125, 2.158, 6.6737003)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=451148065]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, -6.9866867, 0.737, 19.378103)
 size = Vector3(0.454125, 2.158, 6.6737003)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1031706445]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, -23.478157, 0.7370019, 4.0132847)
 size = Vector3(0.454125, 2.158, 6.6737003)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1884850475]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, -18.229263, 0.7370019, 6.838257)
 size = Vector3(0.454125, 2.158, 6.6737003)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=2132959965]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, -23.4, 0.737, 10.002)
 size = Vector3(0.454125, 2.158, 6.6737003)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1299475937]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.14, 0, -1, 0, -4.371139e-08, -20.682653, 0.737, 21.428871)
 size = Vector3(0.454125, 2.158, 6.6737003)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=517316435]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.840446, 0.7045746, 16.887129)
 size = Vector3(1.7872314, 2.4091492, 3.1850586)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Q2/FileCabinet" unique_id=1818785469]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.367428, 0.6985779, 16.887129)
 size = Vector3(1.7872314, 2.3971558, 3.1850586)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="Q3" type="Node" parent="." unique_id=2037711400]
 
@@ -371,22 +335,22 @@ use_collision = true
 [node name="CSGBox3D22" type="CSGBox3D" parent="Q3/PipeMaze" unique_id=1161906771]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5547844, 0.7300396, -18.916773)
 size = Vector3(8.523376, 2.460083, 1.982605)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D23" type="CSGBox3D" parent="Q3/PipeMaze" unique_id=1156094784]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5547843, 0.7300396, -6.7860575)
 size = Vector3(12.45018, 2.460083, 1.982605)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D24" type="CSGBox3D" parent="Q3/PipeMaze" unique_id=900255610]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27.698578, 0.7300396, -11.869313)
 size = Vector3(22.616692, 2.460083, 0.43363953)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D25" type="CSGBox3D" parent="Q3/PipeMaze" unique_id=60353999]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.020675, 0.7300396, -22.65529)
 size = Vector3(24.921629, 2.460083, 1.0708733)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="Templates" type="CSGCombiner3D" parent="Q3/PipeMaze" unique_id=451646879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6025782, 0)
@@ -403,22 +367,22 @@ turn_div = 2
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopLeft" unique_id=246731606]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9971771, 1.7097626, 0.0052986145)
 size = Vector3(3.168579, 2.4516602, 7.1329956)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopLeft" unique_id=491503537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3812237, 1.7097626, 2.003437)
 size = Vector3(2.3422852, 2.4516602, 3.1367188)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopLeft" unique_id=1596803357]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.3879795, 1.7097626, -0.050189972)
 size = Vector3(1, 2.4516602, 2.3398438)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopLeft" unique_id=1603921943]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5754185, 1.7097626, -2.902645)
 size = Vector3(1.3319702, 2.4516602, 3.9866943)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="PuzzleTopMid" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=4232751]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.01585, -0.5, -18.563177)
@@ -429,22 +393,22 @@ turn_div = 2
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopMid" unique_id=1755754900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5353584, 1.7097626, 0.0052986145)
 size = Vector3(2.0480957, 2.4516602, 7.1329956)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopMid" unique_id=1237287530]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5309982, 1.7097626, 2.003437)
 size = Vector3(2.0502014, 2.4516602, 3.1367188)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopMid" unique_id=161890597]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.533371, 1.7097626, -0.050189972)
 size = Vector3(1, 2.4516602, 2.0513306)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopMid" unique_id=949258256]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5074034, 1.7097626, -2.902647)
 size = Vector3(1.3319702, 2.4516602, 6.0580444)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="PuzzleTopRight" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1556955152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.17, -0.5, -18.563)
@@ -461,12 +425,12 @@ turn_div = 2
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidLeft" unique_id=1217593370]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.28861427, 1.7097626, 3.0680046)
 size = Vector3(1, 2.4516602, 6.5478745)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidLeft" unique_id=1999974761]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2323093, 1.7097626, 0.0012750626)
 size = Vector3(0.21826172, 2.4516602, 7.1162167)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="PuzzleCenter" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=238372389]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.025688, -0.5, -11.365351)
@@ -477,22 +441,22 @@ turn_div = 2
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleCenter" unique_id=592122776]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.2914276, 1.7097626, 3.067566)
 size = Vector3(1, 2.4516602, 6.505615)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleCenter" unique_id=1042837511]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.526596, 1.7097626, -3.0658493)
 size = Vector3(1, 2.4516602, 2.0542603)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleCenter" unique_id=1319794669]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5312252, 1.7097626, -3.0658493)
 size = Vector3(1, 2.4516602, 2.060913)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleCenter" unique_id=531170047]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3259954, 1.7097626, 0.0015583038)
 size = Vector3(0.43737793, 2.4516602, 7.118042)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="PuzzleMidRight" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1543348183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.17, -0.5, -11.336)
@@ -503,22 +467,22 @@ turn_div = 2
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidRight" unique_id=2054167797]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.6197052, 1.7097626, 3.067566)
 size = Vector3(1, 2.4516602, 5.8430176)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidRight" unique_id=736936326]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6342678, 1.7097626, 0.9131098)
 size = Vector3(5.8541565, 2.4516602, 5.260254)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidRight" unique_id=634217993]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.1990547, 1.7097626, -3.0589914)
 size = Vector3(1, 2.4516602, 4.6749268)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidRight" unique_id=2045854974]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1988659, 1.7097626, -0.92567635)
 size = Vector3(4.7183228, 2.4516602, 5.260254)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="PuzzleBotLeft" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=673217347]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.885, -0.5, -4.14)
@@ -529,22 +493,22 @@ turn_div = 2
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotLeft" unique_id=1550238919]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9871063, 1.7097626, 0.0052986145)
 size = Vector3(3.1484375, 2.4516602, 7.1329956)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotLeft" unique_id=1933896758]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.389555, 1.7097626, 2.003437)
 size = Vector3(2.3589478, 2.4516602, 3.1367188)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotLeft" unique_id=2056849467]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.3895664, 1.7097626, -0.050189495)
 size = Vector3(1, 2.4516602, 2.3430176)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotLeft" unique_id=317107430]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5697422, 1.7097626, -2.902646)
 size = Vector3(1.3319702, 2.4516602, 3.9753418)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="PuzzleBotMid" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1835120373]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.035555, -0.5, -4.1401324)
@@ -555,17 +519,17 @@ turn_div = 2
 [node name="CSGBox3D" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotMid" unique_id=126174773]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98732, 1.7097626, 0.0052986145)
 size = Vector3(3.1488647, 2.4516602, 7.1329956)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotMid" unique_id=808820678]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.383421, 1.7097626, 1.5083199)
 size = Vector3(2.3466797, 2.4516602, 4.126953)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotMid" unique_id=2066700856]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5744724, 1.7097626, -2.902646)
 size = Vector3(1.3319702, 2.4516602, 3.9848022)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="PuzzleBotRight" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=687226808]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.178, -0.5, -4.14)
@@ -576,17 +540,17 @@ turn_div = 2
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotRight" unique_id=45891468]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.005012512, 1.7097626, 1.5049267)
 size = Vector3(4.1223145, 2.4516602, 7.111206)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotRight" unique_id=1612305796]
 transform = Transform3D(0.67844176, 0, 0.73465407, 0, 1, 0, -0.73465407, 0, 0.67844176, -0.45482254, 1.7097626, -1.7837677)
 size = Vector3(1, 2.4516602, 4.1816406)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotRight" unique_id=100224134]
 transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -1.8104172, 1.7097626, -3.1969185)
 size = Vector3(0.7475586, 2.4516602, 1.0293274)
-material = SubResource("StandardMaterial3D_a2iuu")
+material = ExtResource("2_ousgv")
 
 [node name="Q4" type="Node" parent="." unique_id=1430056035]
 
@@ -596,42 +560,42 @@ use_collision = true
 [node name="CSGBox3D" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=899845549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.331995, 0.73004246, -3.3794346)
 size = Vector3(20.970474, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=734396952]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.349373, 0.73004246, -18.068546)
 size = Vector3(1.2802448, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=212093038]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.342537, 0.73004246, -20.665722)
 size = Vector3(1.2939167, 2.460083, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=15394362]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.7913158, 0.7348652, -14.224061)
 size = Vector3(17.909851, 2.4697266, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=473644456]
 transform = Transform3D(-0.56970996, 0, 0.8218459, 0, 1, 0, -0.8218459, 0, -0.56970996, -15.335159, 0.73486614, -9.746213)
 size = Vector3(5.5256767, 2.4697266, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=1154611333]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.755989, 0.73613834, -15.711607)
 size = Vector3(8.639572, 2.4697266, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=134642283]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17.617756, 0.73613834, -17.32824)
 size = Vector3(11.769512, 2.4697266, 3.4345703)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q4/UsbRoom" unique_id=707044198]
 transform = Transform3D(-0.6325026, 0, 0.7745583, 0, 1, 0, -0.7745583, 0, -0.6325026, -9.557909, 0.72924995, -7.625121)
 size = Vector3(10.484222, 2.458496, 1)
-material = SubResource("StandardMaterial3D_3uc55")
+material = ExtResource("2_ousgv")
 
 [node name="UsbStick" parent="Q4" unique_id=694043513 instance=ExtResource("1_n0xin")]
 transform = Transform3D(2.606837, 0, 0, 0, 21.95731, 0, 0, 0, 7.1012115, -24.550056, 12.804228, -19.418482)
@@ -640,7 +604,7 @@ transform = Transform3D(2.606837, 0, 0, 0, 21.95731, 0, 0, 0, 7.1012115, -24.550
 transform = Transform3D(0.38360667, 0, 0, 0, 0.045542922, 0, 0, 0, 0.14082104, 0.019202232, -0.5155562, 0.0026025772)
 use_collision = true
 size = Vector3(3, 4, 5)
-material = SubResource("StandardMaterial3D_ig8kq")
+material = ExtResource("2_ousgv")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="Q4/UsbStick/CSGBox3D3" unique_id=1236804332]
 transform = Transform3D(0.11371749, 0, 0, 0, 0.6259499, 0, 0, 0, 0.3785158, 1.5123043, -1.353256, 0)
@@ -652,12 +616,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.585592, 9.536743e-07, -16
 [node name="CSGBox3D" type="CSGBox3D" parent="Q4/Dataterm" unique_id=1804238882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27490234, -0.24560547, -0.26254272)
 size = Vector3(0.4501953, 0.50878906, 0.47491455)
-material = SubResource("StandardMaterial3D_c6bg5")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q4/Dataterm" unique_id=729389317]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27832413, 0.21208596, -0.53144455)
 size = Vector3(0.40826416, 0.3959961, 0.30630493)
-material = SubResource("StandardMaterial3D_gh04y")
+material = ExtResource("2_ousgv")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q4/Dataterm/CSGBox3D2" unique_id=963940459]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00075149536, 0.043290198, 0.08548546)
@@ -667,3 +631,4 @@ material = SubResource("StandardMaterial3D_10on7")
 [node name="CSGBox3D3" type="CSGBox3D" parent="Q4/Dataterm" unique_id=1435021087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28089523, 0.020041823, -0.15150642)
 size = Vector3(0.3076172, 0.036132813, 0.11816406)
+material = ExtResource("2_ousgv")
