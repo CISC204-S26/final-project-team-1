@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b04x57uy3fuwt" path="res://Scenes/usb_stick.tscn" id="1_n0xin"]
 [ext_resource type="PackedScene" uid="uid://ugepxpgrh1y6" path="res://Scenes/player.tscn" id="1_nl3pl"]
 [ext_resource type="Texture2D" uid="uid://b8s1ptfp0snli" path="res://Assets/Textures/blue_metal_plate_4k.blend/textures/blue_metal_plate_diff_4k.jpg" id="1_qfcyl"]
+[ext_resource type="AudioStream" uid="uid://dq4nxpevyl4be" path="res://Assets/Audio/BreakChef2.mp3" id="2_a2iuu"]
 [ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
 
@@ -47,6 +48,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.206839, 0.13112628, 24.026283)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player" unique_id=1510420508]
+stream = ExtResource("2_a2iuu")
 volume_db = 5.234
 autoplay = true
 
