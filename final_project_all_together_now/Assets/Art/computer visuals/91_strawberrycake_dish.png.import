@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfn3bj6m8al56"
-path="res://.godot/imported/Peale-cake-1818.jpg-de61999eaf4efa4f531736ec7ac9bc6e.ctex"
+uid="uid://cq1bsrjl1kbru"
+path="res://.godot/imported/91_strawberrycake_dish.png-fa30ebaeff08f328919cb25ce7c53028.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Peale-cake-1818.jpg"
-dest_files=["res://.godot/imported/Peale-cake-1818.jpg-de61999eaf4efa4f531736ec7ac9bc6e.ctex"]
+source_file="res://Assets/Art/computer visuals/91_strawberrycake_dish.png"
+dest_files=["res://.godot/imported/91_strawberrycake_dish.png-fa30ebaeff08f328919cb25ce7c53028.ctex"]
 
 [params]
 
