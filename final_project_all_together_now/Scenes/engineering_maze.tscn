@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dq4nxpevyl4be" path="res://Assets/Audio/BreakChef2.mp3" id="2_a2iuu"]
 [ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
+[ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_myasq"]
 size = Vector3(873.156, 1, 1349.1193)
@@ -25,6 +26,9 @@ albedo_color = Color(0.90588236, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nl3pl"]
 size = Vector3(0.3179245, 0.3383789, 0.275177)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gh04y"]
+albedo_color = Color(1, 0.3254902, 0.96862745, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10on7"]
 transparency = 1
@@ -414,6 +418,17 @@ material = ExtResource("2_ousgv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.367428, 0.6985779, 16.887129)
 size = Vector3(1.7872314, 2.3971558, 3.1850586)
 material = ExtResource("2_ousgv")
+
+[node name="WirePuzzleBoxes" type="Node3D" parent="Q2" unique_id=1980681363]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1519119711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7671, 0.60366166, 5.918811)
+size = Vector3(0.77978516, 1.4541016, 2.0740356)
+material = SubResource("StandardMaterial3D_gh04y")
+
+[node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/CSGBox3D" unique_id=515515985]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
+texture = ExtResource("6_c6bg5")
 
 [node name="Q3" type="Node" parent="." unique_id=2037711400]
 
