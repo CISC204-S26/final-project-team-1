@@ -38,7 +38,7 @@ backlight = Color(0.18932319, 0.6652849, 2.117753e-06, 1)
 [node name="Engineering Maze" type="Node3D" unique_id=1354805339]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1597756771]
-transform = Transform3D(-0.9963407, 0.085438736, -0.0023450097, -0.0017340083, 0.007224848, 0.9999724, 0.08545332, 0.99631727, -0.0070502586, 0, 132.70953, 0)
+transform = Transform3D(-0.9963435, 0.08540952, -0.0022036324, -0.0016297457, 0.006788379, 0.9999756, 0.0854224, 0.9963228, -0.0066243615, 0, 132.70953, 0)
 light_color = Color(0.96, 0.96, 0.96, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
