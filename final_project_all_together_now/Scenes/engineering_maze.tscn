@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dq4nxpevyl4be" path="res://Assets/Audio/BreakChef2.mp3" id="2_a2iuu"]
 [ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
+[ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_myasq"]
 size = Vector3(873.156, 1, 1349.1193)
@@ -26,6 +27,9 @@ albedo_color = Color(0.90588236, 0, 0, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_nl3pl"]
 size = Vector3(0.3179245, 0.3383789, 0.275177)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gh04y"]
+albedo_color = Color(1, 0.3254902, 0.96862745, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10on7"]
 transparency = 1
 albedo_color = Color(0.011837061, 0.59807235, 4.042983e-06, 1)
@@ -38,7 +42,7 @@ backlight = Color(0.18932319, 0.6652849, 2.117753e-06, 1)
 [node name="Engineering Maze" type="Node3D" unique_id=1354805339]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1597756771]
-transform = Transform3D(-0.9963407, 0.085438736, -0.0023450097, -0.0017340083, 0.007224848, 0.9999724, 0.08545332, 0.99631727, -0.0070502586, 0, 132.70953, 0)
+transform = Transform3D(-0.9963435, 0.08540952, -0.0022036324, -0.0016297457, 0.006788379, 0.9999756, 0.0854224, 0.9963228, -0.0066243615, 0, 132.70953, 0)
 light_color = Color(0.96, 0.96, 0.96, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
@@ -415,6 +419,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.367428, 0.6985779, 16.887
 size = Vector3(1.7872314, 2.3971558, 3.1850586)
 material = ExtResource("2_ousgv")
 
+[node name="WirePuzzleBoxes" type="Node3D" parent="Q2" unique_id=1980681363]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1519119711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7671, 0.60366166, 5.918811)
+size = Vector3(0.77978516, 1.4541016, 2.0740356)
+material = SubResource("StandardMaterial3D_gh04y")
+
+[node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/CSGBox3D" unique_id=515515985]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
+texture = ExtResource("6_c6bg5")
+
 [node name="Q3" type="Node" parent="." unique_id=2037711400]
 
 [node name="PipeMaze" type="CSGCombiner3D" parent="Q3" unique_id=1133474168]
@@ -449,9 +464,8 @@ collision_mask = 2
 
 [node name="PuzzleTopLeft" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1126247621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.885, -0.5, -18.563)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopLeft" unique_id=246731606]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9971771, 1.7097626, 0.0052986145)
@@ -473,11 +487,14 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.57
 size = Vector3(1.3319702, 2.4516602, 3.9866943)
 material = ExtResource("2_ousgv")
 
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleTopLeft" unique_id=531508126]
+script = ExtResource("4_nl3pl")
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
 [node name="PuzzleTopMid" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=4232751]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.01585, -0.5, -18.563177)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleTopMid" unique_id=1755754900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5353584, 1.7097626, 0.0052986145)
@@ -499,17 +516,19 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5
 size = Vector3(1.3319702, 2.4516602, 6.0580444)
 material = ExtResource("2_ousgv")
 
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleTopMid" unique_id=1737435077]
+script = ExtResource("4_nl3pl")
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
 [node name="PuzzleTopRight" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1556955152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.17, -0.5, -18.563)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="PuzzleMidLeft" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1477944538]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.885, -0.5, -11.377)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidLeft" unique_id=1217593370]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.28861427, 1.7097626, 3.0680046)
@@ -521,11 +540,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2323093, 1.7097626, 0.00127
 size = Vector3(0.21826172, 2.4516602, 7.1162167)
 material = ExtResource("2_ousgv")
 
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleMidLeft" unique_id=1875732477]
+script = ExtResource("4_nl3pl")
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
 [node name="PuzzleCenter" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=238372389]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.025688, -0.5, -11.365351)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleCenter" unique_id=592122776]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.2914276, 1.7097626, 3.067566)
@@ -547,11 +569,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3259954, 1.7097626, 0.0015
 size = Vector3(0.43737793, 2.4516602, 7.118042)
 material = ExtResource("2_ousgv")
 
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleCenter" unique_id=1362548695]
+script = ExtResource("4_nl3pl")
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
 [node name="PuzzleMidRight" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1543348183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.17, -0.5, -11.336)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleMidRight" unique_id=2054167797]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.6197052, 1.7097626, 3.067566)
@@ -573,11 +598,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1988659, 1.7097626, -0.925
 size = Vector3(4.7183228, 2.4516602, 5.260254)
 material = ExtResource("2_ousgv")
 
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleMidRight" unique_id=221170476]
+script = ExtResource("4_nl3pl")
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
 [node name="PuzzleBotLeft" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=673217347]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.885, -0.5, -4.14)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotLeft" unique_id=1550238919]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9871063, 1.7097626, 0.0052986145)
@@ -599,11 +627,14 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.56
 size = Vector3(1.3319702, 2.4516602, 3.9753418)
 material = ExtResource("2_ousgv")
 
-[node name="PuzzleBotMid" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1835120373]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.035555, -0.5, -4.1401324)
-size = Vector3(7.138, 1, 7.138)
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleBotLeft" unique_id=151910353]
 script = ExtResource("4_nl3pl")
-turn_div = 2
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
+[node name="PuzzleBotMid" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=1835120373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.035555, -0.67506766, -4.1401324)
+flip_faces = true
+size = Vector3(7.138, 1, 7.138)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotMid" unique_id=126174773]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98732, 1.7097626, 0.0052986145)
@@ -620,11 +651,14 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.57
 size = Vector3(1.3319702, 2.4516602, 3.9848022)
 material = ExtResource("2_ousgv")
 
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleBotMid" unique_id=978027201]
+script = ExtResource("4_nl3pl")
+metadata/_custom_type_script = "uid://boha36cki4afj"
+
 [node name="PuzzleBotRight" type="CSGBox3D" parent="Q3/PipeMaze/Templates" unique_id=687226808]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.178, -0.5, -4.14)
+flip_faces = true
 size = Vector3(7.138, 1, 7.138)
-script = ExtResource("4_nl3pl")
-turn_div = 2
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Q3/PipeMaze/Templates/PuzzleBotRight" unique_id=45891468]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.005012512, 1.7097626, 1.5049267)
@@ -640,6 +674,10 @@ material = ExtResource("2_ousgv")
 transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -1.8104172, 1.7097626, -3.1969185)
 size = Vector3(0.7475586, 2.4516602, 1.0293274)
 material = ExtResource("2_ousgv")
+
+[node name="TurnCtrl" type="Node" parent="Q3/PipeMaze/Templates/PuzzleBotRight" unique_id=102803629]
+script = ExtResource("4_nl3pl")
+metadata/_custom_type_script = "uid://boha36cki4afj"
 
 [node name="Q4" type="Node" parent="." unique_id=1430056035]
 
