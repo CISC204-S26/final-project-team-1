@@ -10,6 +10,7 @@ extends CharacterBody3D
 @export var gravity = -30
 
 func _physics_process(delta):
+	print(camera_pivot.rotation.x)
 	move_and_slide() ## Move and Slide
 	
 	if Input.is_action_just_pressed("camera_left"):
@@ -17,6 +18,12 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("camera_right"):
 		turn.turn_right()
+	
+	if Input.is_action_just_pressed("test_up"):
+		turn.look_vert(5)
+	
+	if Input.is_action_just_pressed("test_down"):
+		turn.look_vert(30)
 	
 	## Gets Movement Input ########################################################################
 	var input_vector := Vector2(
