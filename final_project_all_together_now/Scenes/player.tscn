@@ -14,7 +14,7 @@ script = ExtResource("1_v0iea")
 jump_impulse = 10
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=106138803]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.084228516, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_f60y1")
 
 [node name="Character" type="Node3D" parent="." unique_id=233434363]
@@ -40,4 +40,5 @@ mesh = SubResource("PrismMesh_cvnsp")
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=847748010]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.6069938, 0)
 billboard = 2
+transparent = false
 texture = ExtResource("3_6t5aa")

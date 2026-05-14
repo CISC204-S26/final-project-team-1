@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bam3mhe8res0p"]
+
+[ext_resource type="VideoStream" uid="uid://d2xjerig76u8k" path="res://Assets/Video/Light Rays Background Loop.ogv" id="1_28flt"]
+[ext_resource type="Script" uid="uid://dgslvq6lnmequ" path="res://Scenes/main_menu.gd" id="1_n45e2"]
+[ext_resource type="AudioStream" uid="uid://casu144yoarl8" path="res://Assets/Audio/neblasaveroom.wav" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://vnmrsgd3jaiy" path="res://Assets/Art/Screenshot 2026-05-14 153733.png" id="3_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://cwnvorotwdi0" path="res://Assets/Art/Chefborg.png" id="4_n45e2"]
+[ext_resource type="FontFile" uid="uid://bvregfgmhjd07" path="res://Assets/fonts/CaslonAntique.ttf" id="6_opfnp"]
+
+[node name="MainMenu" type="Control" unique_id=613996590]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n45e2")
+
+[node name="LightRays" type="VideoStreamPlayer" parent="." unique_id=1431733232]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_28flt")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Background" type="ColorRect" parent="." unique_id=881009870]
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=583879499]
+stream = ExtResource("2_48xlc")
+volume_db = 10.0
+autoplay = true
+
+[node name="MenuAlignment" type="HBoxContainer" parent="." unique_id=37124602]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Chef" type="MarginContainer" parent="MenuAlignment" unique_id=599753317]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MirageMargin" type="MarginContainer" parent="MenuAlignment/Chef" unique_id=508437205]
+layout_mode = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 250
+
+[node name="ChefMirage" type="TextureRect" parent="MenuAlignment/Chef/MirageMargin" unique_id=473967232]
+modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 2
+texture = ExtResource("3_ce3w2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ChefMargin" type="MarginContainer" parent="MenuAlignment/Chef" unique_id=437756790]
+layout_mode = 2
+theme_override_constants/margin_top = 400
+
+[node name="Chef" type="TextureRect" parent="MenuAlignment/Chef/ChefMargin" unique_id=957894840]
+layout_mode = 2
+texture = ExtResource("4_n45e2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Menu" type="MarginContainer" parent="MenuAlignment" unique_id=374525635]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.65
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuAlignment/Menu" unique_id=1492487030]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="MenuAlignment/Menu/VBoxContainer" unique_id=658286900]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[font=res://Assets/fonts/BLKCHCRY.TTF][font_size=60]Chef Qu[fade]est —[font=res://Assets/fonts/Facon.ttf][font_size=90] [color=crimson]0
+[hr]"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ButtonMargin" type="MarginContainer" parent="MenuAlignment/Menu/VBoxContainer" unique_id=935430830]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 25
+
+[node name="Buttons" type="VBoxContainer" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin" unique_id=913832443]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin/Buttons" unique_id=1789960090]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("6_opfnp")
+theme_override_font_sizes/font_size = 45
+text = "Start"
+
+[node name="Button2" type="Button" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin/Buttons" unique_id=1214924528]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("6_opfnp")
+theme_override_font_sizes/font_size = 45
+text = "Options"
+
+[node name="Button3" type="Button" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin/Buttons" unique_id=176722534]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("6_opfnp")
+theme_override_font_sizes/font_size = 45
+text = "Quit"
