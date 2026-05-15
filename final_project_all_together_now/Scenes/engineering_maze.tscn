@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://b20t4u6vvbc5n"]
 
-[ext_resource type="PackedScene" uid="uid://bkwvqsx3jclkt" path="res://Scenes/enemy.tscn" id="1_ig8kq"]
+[ext_resource type="PackedScene" uid="uid://cw4v1y7j6cgdi" path="res://Scenes/enemy.tscn" id="1_ig8kq"]
 [ext_resource type="PackedScene" uid="uid://b04x57uy3fuwt" path="res://Scenes/usb_stick.tscn" id="1_n0xin"]
 [ext_resource type="PackedScene" uid="uid://ugepxpgrh1y6" path="res://Scenes/player.tscn" id="1_nl3pl"]
 [ext_resource type="Texture2D" uid="uid://b8s1ptfp0snli" path="res://Assets/Textures/blue_metal_plate_4k.blend/textures/blue_metal_plate_diff_4k.jpg" id="1_qfcyl"]
-[ext_resource type="AudioStream" uid="uid://dq4nxpevyl4be" path="res://Assets/Audio/BreakChef2.mp3" id="2_a2iuu"]
 [ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
 [ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
@@ -54,11 +53,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.571306, -4.7683716e-07, -
 
 [node name="Player" parent="." unique_id=868634589 instance=ExtResource("1_nl3pl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.206839, 0.13112628, 23.343609)
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player" unique_id=1510420508]
-stream = ExtResource("2_a2iuu")
-volume_db = 5.234
-autoplay = true
 
 [node name="Base" type="Node" parent="." unique_id=1166597071]
 
@@ -710,16 +704,19 @@ transform = Transform3D(-0.6325026, 0, 0.7745583, 0, 1, 0, -0.7745583, 0, -0.632
 size = Vector3(10.484222, 2.458496, 1)
 material = ExtResource("2_ousgv")
 
-[node name="UsbStick" parent="Q4" unique_id=694043513 instance=ExtResource("1_n0xin")]
+[node name="Usb" type="CSGCombiner3D" parent="Q4" unique_id=1282577326]
+use_collision = true
+
+[node name="UsbStick" parent="Q4/Usb" unique_id=694043513 instance=ExtResource("1_n0xin")]
 transform = Transform3D(2.606837, 0, 0, 0, 21.95731, 0, 0, 0, 7.1012115, -24.550056, 12.804228, -19.418482)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="Q4/UsbStick" unique_id=1240304828]
+[node name="CSGBox3D3" type="CSGBox3D" parent="Q4/Usb/UsbStick" unique_id=1240304828]
 transform = Transform3D(0.38360667, 0, 0, 0, 0.045542922, 0, 0, 0, 0.14082104, 0.019202232, -0.5155562, 0.0026025772)
 use_collision = true
 size = Vector3(3, 4, 5)
 material = ExtResource("2_ousgv")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Q4/UsbStick/CSGBox3D3" unique_id=1236804332]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Q4/Usb/UsbStick/CSGBox3D3" unique_id=1236804332]
 transform = Transform3D(0.11371749, 0, 0, 0, 0.6259499, 0, 0, 0, 0.3785158, 1.5123043, -1.353256, 0)
 radius = 1.3377717
 

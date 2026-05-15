@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://vnmrsgd3jaiy" path="res://Assets/Art/Screenshot 2026-05-14 153733.png" id="3_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://cwnvorotwdi0" path="res://Assets/Art/Chefborg.png" id="4_n45e2"]
 [ext_resource type="FontFile" uid="uid://bvregfgmhjd07" path="res://Assets/fonts/CaslonAntique.ttf" id="6_opfnp"]
+[ext_resource type="AudioStream" uid="uid://dwgksq2d7kdln" path="res://Assets/Audio/whoosh-dark-metallic-vadi-sound-1-00-05.mp3" id="7_cp0ys"]
+[ext_resource type="AudioStream" uid="uid://bg2ta1i41v57" path="res://Assets/Audio/whoosh-metallic-wind-epic-stock-media-1-00-05.mp3" id="8_yhxw7"]
+[ext_resource type="AudioStream" uid="uid://cltq7a88436v" path="res://Assets/Audio/notification-sci-fi-message-alert-epic-stock-media-1-00-05.mp3" id="9_trj04"]
 
 [node name="MainMenu" type="Control" unique_id=613996590]
 layout_mode = 3
@@ -39,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=583879499]
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=583879499]
 stream = ExtResource("2_48xlc")
 volume_db = 10.0
 
@@ -125,5 +128,20 @@ text = "[pulse freq=.5 color=GRAY][font=res://Assets/fonts/BLKCHCRY.TTF][font_si
 [hr]"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="Swoosh" type="AudioStreamPlayer2D" parent="Title" unique_id=1981513428]
+position = Vector2(-780, -240)
+stream = ExtResource("7_cp0ys")
+volume_db = -20.042
+
+[node name="Wind" type="AudioStreamPlayer2D" parent="Title" unique_id=225921959]
+position = Vector2(-780, -240)
+stream = ExtResource("8_yhxw7")
+volume_db = -34.125
+
+[node name="Beeps" type="AudioStreamPlayer2D" parent="Title" unique_id=1989078739]
+position = Vector2(-780, -240)
+stream = ExtResource("9_trj04")
+volume_db = -31.959
 
 [connection signal="pressed" from="MenuAlignment/ButtonMargin/Buttons/Quit" to="." method="_on_quit_pressed"]

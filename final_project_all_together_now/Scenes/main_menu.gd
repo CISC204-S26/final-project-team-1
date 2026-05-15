@@ -4,7 +4,10 @@ extends Control
 @onready var buttons = $MenuAlignment/ButtonMargin
 @onready var chef_mirage = $MenuAlignment/Chef/MirageMargin/ChefMirage
 
-@onready var music = $AudioStreamPlayer2D
+@onready var music = $Music
+@onready var swoosh = $Title/Swoosh
+@onready var wind = $Title/Wind
+@onready var beep = $Title/Beeps
 
 func _ready() -> void:
 	title.position = Vector2(1250,240)
@@ -17,6 +20,13 @@ func _ready() -> void:
 	
 	var title_vis_tween = get_tree().create_tween()
 	title_vis_tween.tween_property(title, "modulate:a", 1, 3).set_trans(Tween.TRANS_QUAD)
+	
+	swoosh.play()
+	await get_tree().create_timer(.5).timeout
+	beep.play()
+	await get_tree().create_timer(.2).timeout
+	wind.play()
+	
 	
 	await title_pos_tween.finished
 	
