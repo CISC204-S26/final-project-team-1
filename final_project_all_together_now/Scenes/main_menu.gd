@@ -13,7 +13,7 @@ func _ready() -> void:
 	chef_mirage.modulate.a = 0
 	
 	var title_pos_tween = get_tree().create_tween()
-	title_pos_tween.tween_property(title,"position", Vector2(800, 240), 2.75).set_trans(Tween.TRANS_QUAD)
+	title_pos_tween.tween_property(title,"position", Vector2(780, 240), 2.75).set_trans(Tween.TRANS_QUAD)
 	
 	var title_vis_tween = get_tree().create_tween()
 	title_vis_tween.tween_property(title, "modulate:a", 1, 3).set_trans(Tween.TRANS_QUAD)
@@ -23,7 +23,11 @@ func _ready() -> void:
 	music.play()
 	
 	var button_vis_tween = get_tree().create_tween()
-	button_vis_tween.tween_property(buttons, "modulate:a", 1, 3).set_trans(Tween.TRANS_QUAD)
+	button_vis_tween.tween_property(buttons, "modulate:a", 1, 5).set_trans(Tween.TRANS_QUAD)
 	
 	var chef_vis_tween = get_tree().create_tween()
-	chef_vis_tween.tween_property(chef_mirage, "modulate:a", .25, 5).set_trans(Tween.TRANS_QUAD)
+	chef_vis_tween.tween_property(chef_mirage, "modulate:a", .25, 7.5).set_trans(Tween.TRANS_QUAD)
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
