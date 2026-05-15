@@ -42,7 +42,6 @@ color = Color(0, 0, 0, 1)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=583879499]
 stream = ExtResource("2_48xlc")
 volume_db = 10.0
-autoplay = true
 
 [node name="MenuAlignment" type="HBoxContainer" parent="." unique_id=37124602]
 layout_mode = 1
@@ -63,7 +62,7 @@ theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 250
 
 [node name="ChefMirage" type="TextureRect" parent="MenuAlignment/Chef/MirageMargin" unique_id=473967232]
-modulate = Color(1, 1, 1, 0.19607843)
+modulate = Color(1, 1, 1, 0.09803922)
 layout_mode = 2
 texture = ExtResource("3_ce3w2")
 expand_mode = 1
@@ -74,58 +73,56 @@ layout_mode = 2
 theme_override_constants/margin_top = 400
 
 [node name="Chef" type="TextureRect" parent="MenuAlignment/Chef/ChefMargin" unique_id=957894840]
+modulate = Color(0.75, 0.75, 0.75, 1)
 layout_mode = 2
 texture = ExtResource("4_n45e2")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Menu" type="MarginContainer" parent="MenuAlignment" unique_id=374525635]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.65
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MenuAlignment/Menu" unique_id=1492487030]
-layout_mode = 2
-
-[node name="Title" type="RichTextLabel" parent="MenuAlignment/Menu/VBoxContainer" unique_id=658286900]
-layout_mode = 2
-size_flags_vertical = 3
-bbcode_enabled = true
-text = "[font=res://Assets/fonts/BLKCHCRY.TTF][font_size=60]Chef Qu[fade]est —[font=res://Assets/fonts/Facon.ttf][font_size=90] [color=crimson]0
-[hr]"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="ButtonMargin" type="MarginContainer" parent="MenuAlignment/Menu/VBoxContainer" unique_id=935430830]
+[node name="ButtonMargin" type="MarginContainer" parent="MenuAlignment" unique_id=935430830]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 150
-theme_override_constants/margin_top = 35
-theme_override_constants/margin_right = 150
+theme_override_constants/margin_top = 450
+theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 25
 
-[node name="Buttons" type="VBoxContainer" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin" unique_id=913832443]
+[node name="Buttons" type="VBoxContainer" parent="MenuAlignment/ButtonMargin" unique_id=913832443]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
 
-[node name="Button" type="Button" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin/Buttons" unique_id=1789960090]
+[node name="Button" type="Button" parent="MenuAlignment/ButtonMargin/Buttons" unique_id=1789960090]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("6_opfnp")
 theme_override_font_sizes/font_size = 45
 text = "Start"
 
-[node name="Button2" type="Button" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin/Buttons" unique_id=1214924528]
+[node name="Button2" type="Button" parent="MenuAlignment/ButtonMargin/Buttons" unique_id=1214924528]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("6_opfnp")
 theme_override_font_sizes/font_size = 45
 text = "Options"
 
-[node name="Button3" type="Button" parent="MenuAlignment/Menu/VBoxContainer/ButtonMargin/Buttons" unique_id=176722534]
+[node name="Button3" type="Button" parent="MenuAlignment/ButtonMargin/Buttons" unique_id=176722534]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("6_opfnp")
 theme_override_font_sizes/font_size = 45
 text = "Quit"
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=658286900]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 800.0
+offset_top = 240.0
+offset_right = 1271.0
+offset_bottom = 412.0
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[font=res://Assets/fonts/BLKCHCRY.TTF][font_size=60]Chef Qu[fade]est —[font=res://Assets/fonts/Facon.ttf][font_size=90] [color=crimson]0
+[hr]"
+horizontal_alignment = 1
+vertical_alignment = 2
