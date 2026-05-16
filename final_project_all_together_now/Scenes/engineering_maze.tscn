@@ -20,8 +20,17 @@ albedo_color = Color(0.90588236, 0, 0, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_nl3pl"]
 size = Vector3(0.3179245, 0.3383789, 0.275177)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig8kq"]
+albedo_color = Color(1, 0.30980393, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x58x3"]
+albedo_color = Color(1.6994185, 0.5973027, 0.12124073, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gugie"]
+albedo_color = Color(1.6994185, 0, 0, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gh04y"]
-albedo_color = Color(1, 0.3254902, 0.96862745, 1)
+albedo_color = Color(0, 1.6994185, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6bg5"]
 albedo_color = Color(0.00043172683, 0.00043172683, 0.00043172683, 1)
@@ -412,12 +421,39 @@ material = ExtResource("2_ousgv")
 
 [node name="WirePuzzleBoxes" type="Node3D" parent="Q2" unique_id=1980681363]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1519119711]
+[node name="PurpleWireBox" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1519119711]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7671, 0.60366166, 5.918811)
+size = Vector3(0.77978516, 1.4541016, 2.0740356)
+material = SubResource("StandardMaterial3D_ig8kq")
+
+[node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/PurpleWireBox" unique_id=515515985]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
+texture = ExtResource("6_c6bg5")
+
+[node name="OrangeWireBox" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=720645251]
+transform = Transform3D(0.015707336, 0, -0.9998766, 0, 1, 0, 0.9998766, 0, 0.015707336, -8.667918, 0.60366166, 19.34369)
+size = Vector3(0.48376465, 1.4541016, 2.0740356)
+material = SubResource("StandardMaterial3D_x58x3")
+
+[node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/OrangeWireBox" unique_id=156473984]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
+texture = ExtResource("6_c6bg5")
+
+[node name="RedWireBox" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1508198889]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -22.241259, 0.60366166, 16.996365)
+size = Vector3(0.77978516, 1.4541016, 2.0740356)
+material = SubResource("StandardMaterial3D_gugie")
+
+[node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/RedWireBox" unique_id=1223280506]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
+texture = ExtResource("6_c6bg5")
+
+[node name="GreenWireBox" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1771866194]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -27.058807, 0.60366166, 6.6717978)
 size = Vector3(0.77978516, 1.4541016, 2.0740356)
 material = SubResource("StandardMaterial3D_gh04y")
 
-[node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/CSGBox3D" unique_id=515515985]
+[node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/GreenWireBox" unique_id=2131719165]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
 texture = ExtResource("6_c6bg5")
 
