@@ -30,14 +30,14 @@ func _ready() -> void:
 	
 	await title_pos_tween.finished
 	
-	music.play()
-	
 	var button_vis_tween = get_tree().create_tween()
 	button_vis_tween.tween_property(buttons, "modulate:a", 1, 5).set_trans(Tween.TRANS_QUAD)
 	
 	var chef_vis_tween = get_tree().create_tween()
 	chef_vis_tween.tween_property(chef_mirage, "modulate:a", .25, 7.5).set_trans(Tween.TRANS_QUAD)
-
+	
+	await get_tree().create_timer(.7).timeout
+	music.play()
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
