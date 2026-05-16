@@ -15,18 +15,29 @@ script = ExtResource("1_2d6cc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=884486028]
 self_modulate = Color(1, 1, 1, 0.89411765)
-offset_right = 1280.0
-offset_bottom = 720.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_ne0nj")
 
 [node name="mapButton" type="Button" parent="TextureRect" unique_id=1890698479]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 446.0
-offset_top = 101.00001
-offset_right = 478.0
-offset_bottom = 130.0
-scale = Vector2(2.5, 2.5)
+offset_left = 488.0
+offset_top = 203.0
+offset_right = 520.0
+offset_bottom = 232.0
+scale = Vector2(2, 2)
 
 [node name="cake" type="Sprite2D" parent="TextureRect/mapButton" unique_id=1218715413]
 position = Vector2(16, 14)
@@ -48,11 +59,11 @@ vertical_alignment = 1
 [node name="powerSupplyButton" type="Button" parent="TextureRect" unique_id=1445048948]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 755.00006
-offset_top = 86.0
-offset_right = 777.00006
-offset_bottom = 114.0
-scale = Vector2(2.5, 2.5)
+offset_left = 689.0
+offset_top = 187.0
+offset_right = 711.0
+offset_bottom = 215.0
+scale = Vector2(2, 2)
 
 [node name="jamjar" type="Sprite2D" parent="TextureRect/powerSupplyButton" unique_id=708296068]
 position = Vector2(11, 14)
@@ -74,11 +85,11 @@ autowrap_mode = 2
 [node name="passwordsButton" type="Button" parent="TextureRect" unique_id=2956711]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 744.0
-offset_top = 423.00003
-offset_right = 775.0
-offset_bottom = 453.00003
-scale = Vector2(2.5, 2.5)
+offset_left = 695.0
+offset_top = 452.0
+offset_right = 726.0
+offset_bottom = 482.0
+scale = Vector2(2, 2)
 
 [node name="chocolatebar" type="Sprite2D" parent="TextureRect/passwordsButton" unique_id=1015266405]
 position = Vector2(15.5, 14)
@@ -100,11 +111,11 @@ vertical_alignment = 1
 [node name="turningButton" type="Button" parent="TextureRect" unique_id=430793896]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 466.0
-offset_top = 427.0
-offset_right = 498.0
-offset_bottom = 458.0
-scale = Vector2(2.5, 2.5)
+offset_left = 498.0
+offset_top = 450.0
+offset_right = 530.0
+offset_bottom = 481.0
+scale = Vector2(2, 2)
 
 [node name="cookies" type="Sprite2D" parent="TextureRect/turningButton" unique_id=2140047290]
 position = Vector2(16, 15)
@@ -125,11 +136,11 @@ vertical_alignment = 1
 [node name="filesButton" type="Button" parent="TextureRect" unique_id=848200570]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 580.0
-offset_top = 222.99998
-offset_right = 620.0
-offset_bottom = 263.0
-scale = Vector2(2.5, 2.5)
+offset_left = 585.0
+offset_top = 302.0
+offset_right = 625.0
+offset_bottom = 342.0
+scale = Vector2(2, 2)
 
 [node name="plates" type="Sprite2D" parent="TextureRect/filesButton" unique_id=1051974705]
 position = Vector2(20, 19)
@@ -148,6 +159,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="mapProgram" type="CanvasLayer" parent="." unique_id=279305095]
+scale = Vector2(0.95, 0.95)
+transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
 
 [node name="mapBkgd" type="ColorRect" parent="mapProgram" unique_id=1178922520 groups=["Programs"]]
 visible = false
@@ -156,9 +169,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
+offset_left = -285.0
 offset_top = -300.0
-offset_right = 300.0
+offset_right = 315.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -194,6 +207,8 @@ scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
 [node name="powerSupplyProgram" type="CanvasLayer" parent="." unique_id=792990968]
+scale = Vector2(0.95, 0.95)
+transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
 
 [node name="powerSupplyBkgd" type="ColorRect" parent="powerSupplyProgram" unique_id=1720875672 groups=["Programs"]]
 visible = false
@@ -202,9 +217,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
+offset_left = -285.0
 offset_top = -300.0
-offset_right = 300.0
+offset_right = 315.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -240,6 +255,8 @@ scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
 [node name="passwordsProgram" type="CanvasLayer" parent="." unique_id=648729198]
+scale = Vector2(0.95, 0.95)
+transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
 
 [node name="passwordsBkgd" type="ColorRect" parent="passwordsProgram" unique_id=1811066314 groups=["Programs"]]
 visible = false
@@ -248,9 +265,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
+offset_left = -285.0
 offset_top = -300.0
-offset_right = 300.0
+offset_right = 315.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -286,6 +303,8 @@ scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
 [node name="turningProgram" type="CanvasLayer" parent="." unique_id=2117903046]
+scale = Vector2(0.95, 0.95)
+transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
 
 [node name="turningBkgd" type="ColorRect" parent="turningProgram" unique_id=512248211 groups=["Programs"]]
 visible = false
@@ -294,9 +313,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
+offset_left = -285.0
 offset_top = -300.0
-offset_right = 300.0
+offset_right = 315.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -332,6 +351,8 @@ scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
 [node name="filesProgram" type="CanvasLayer" parent="." unique_id=1149314988]
+scale = Vector2(0.95, 0.95)
+transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
 
 [node name="fileBkgd" type="ColorRect" parent="filesProgram" unique_id=1536399797 groups=["Programs"]]
 visible = false
@@ -340,9 +361,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
+offset_left = -285.0
 offset_top = -300.0
-offset_right = 300.0
+offset_right = 315.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2

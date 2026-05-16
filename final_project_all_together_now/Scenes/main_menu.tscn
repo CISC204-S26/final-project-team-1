@@ -144,4 +144,5 @@ position = Vector2(-780, -240)
 stream = ExtResource("9_trj04")
 volume_db = -31.959
 
+[connection signal="pressed" from="MenuAlignment/ButtonMargin/Buttons/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MenuAlignment/ButtonMargin/Buttons/Quit" to="." method="_on_quit_pressed"]
