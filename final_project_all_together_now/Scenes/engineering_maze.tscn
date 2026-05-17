@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b20t4u6vvbc5n"]
 
+[ext_resource type="Script" uid="uid://dsepxlg6nxriy" path="res://Scenes/engineering_maze.gd" id="1_10on7"]
 [ext_resource type="Script" uid="uid://dd5nl6yycqg51" path="res://Scripts/globals.gd" id="1_gh04y"]
 [ext_resource type="PackedScene" uid="uid://cw4v1y7j6cgdi" path="res://Scenes/enemy.tscn" id="1_ig8kq"]
 [ext_resource type="PackedScene" uid="uid://b04x57uy3fuwt" path="res://Scenes/usb_stick.tscn" id="1_n0xin"]
@@ -52,6 +53,7 @@ backlight = Color(0.18932319, 0.6652849, 2.117753e-06, 1)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ig8kq"]
 
 [node name="Engineering Maze" type="Node3D" unique_id=1354805339]
+script = ExtResource("1_10on7")
 
 [node name="Globals" type="Node" parent="." unique_id=12336472]
 script = ExtResource("1_gh04y")
@@ -69,6 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.571306, -4.7683716e-07, -
 
 [node name="Player" parent="." unique_id=868634589 instance=ExtResource("1_nl3pl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.206839, 0.13112628, 23.343609)
+collision_layer = 3
 
 [node name="Base" type="Node" parent="." unique_id=1166597071]
 
@@ -821,6 +824,8 @@ material = ExtResource("2_ousgv")
 
 [node name="ButtonArea" type="Area3D" parent="." unique_id=14896093]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.069746, 0, -19.352608)
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ButtonArea" unique_id=1916140341]
 transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.115198135, 0.8915367, 0.166399)
@@ -835,3 +840,6 @@ size = Vector3(1.8677979, 2.4641418, 0.2944336)
 [node name="Q2ToQ4" type="CSGBox3D" parent="Doors" unique_id=1756941795]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.11552478, 0.7320709, 4.0229)
 size = Vector3(1.5939636, 2.4641418, 0.2944336)
+
+[connection signal="body_entered" from="ButtonArea" to="." method="_on_button_area_body_entered"]
+[connection signal="body_exited" from="ButtonArea" to="." method="_on_button_area_body_exited"]

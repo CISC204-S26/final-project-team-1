@@ -26,4 +26,4 @@ func turn_right():
 
 func look_vert(look_angle):
 	var tween = get_tree().create_tween()
-	tween.tween_property(target, "rotation", Vector3(deg_to_rad(look_angle),target.rotation.y, target.rotation.z), rotation_speed).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(target, "rotation", Vector3(deg_to_rad(look_angle),target.rotation.y, target.rotation.z), rotation_speed*2).set_trans(Tween.TRANS_SINE)
