@@ -825,3 +825,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.069746, 0, -19.352608)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ButtonArea" unique_id=1916140341]
 transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.115198135, 0.8915367, 0.166399)
 shape = SubResource("CylinderShape3D_ig8kq")
+
+[node name="Doors" type="Node" parent="." unique_id=1922991926]
+
+[node name="Q1ToQ2" type="CSGBox3D" parent="Doors" unique_id=8398434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.888962, 0.7320709, -0.013556838)
+size = Vector3(1.8677979, 2.4641418, 0.2944336)
+
+[node name="Q2ToQ4" type="CSGBox3D" parent="Doors" unique_id=1756941795]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.11552478, 0.7320709, 4.0229)
+size = Vector3(1.5939636, 2.4641418, 0.2944336)

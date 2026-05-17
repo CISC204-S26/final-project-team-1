@@ -1,15 +1,24 @@
 [gd_scene format=3 uid="uid://cw4v1y7j6cgdi"]
 
+[ext_resource type="Script" uid="uid://c7dpel7aic5hn" path="res://Scenes/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://c0qq1hwedelaj" path="res://Assets/Art/ChefMiku.png" id="1_7k104"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4gyqm"]
 
-[node name="Area3D" type="Area3D" unique_id=194484897]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1936857878]
+script = ExtResource("1_1f0kj")
+
+[node name="Enemy" type="CollisionShape3D" parent="." unique_id=1436717414]
+shape = SubResource("CapsuleShape3D_4gyqm")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=2052637585]
 transform = Transform3D(0.08693625, 0, 0, 0, 0.10934781, 0, 0, 0, 1, 0, 1.0638576, 0)
 billboard = 2
 texture = ExtResource("1_7k104")
 
-[node name="Enemy" type="CollisionShape3D" parent="." unique_id=740205272]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=197152221]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=194484897]
+
+[node name="Enemy" type="CollisionShape3D" parent="Area3D" unique_id=740205272]
 shape = SubResource("CapsuleShape3D_4gyqm")
