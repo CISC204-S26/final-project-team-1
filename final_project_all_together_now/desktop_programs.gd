@@ -39,3 +39,33 @@ func _on_files_button_pressed():
 func _on_exit_button_pressed():
 	print("You closed the program!")
 	get_tree().call_group("Programs", "hide") 
+
+
+func _on_start_button_pressed():
+	print("You clicked start! Ready?")
+	$BlueStartupScreen/startButton.hide()
+	$BlueStartupScreen/passwordBox.show()
+
+
+func _on_enter_button_pressed():
+	print("You clicked to submit a password!")
+	if $BlueStartupScreen/passwordBox.text == "Password": 
+		$BlueStartupScreen.hide()
+		$loreScreen.show()
+		await get_tree().create_timer(10).timeout
+		$loreScreen/playbutton.show()
+		
+	else: if $BlueStartupScreen/passwordBox.text == "password": 
+		$BlueStartupScreen.hide()
+		$loreScreen.show()
+		await get_tree().create_timer(10).timeout
+		$loreScreen/playbutton.show()
+		
+	else: 
+		$BlueStartupScreen/passwordBox.add_theme_color_override("background_color", "red")
+		await get_tree().create_timer(.25).timeout 
+		$BlueStartupScreen/passwordBox.add_theme_color_override("background_color", Color(0, 0, 0, 0))
+
+
+func _on_playbutton_pressed():
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
