@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bam3mhe8res0p"]
 
 [ext_resource type="VideoStream" uid="uid://d2xjerig76u8k" path="res://Assets/Video/Light Rays Background Loop.ogv" id="1_28flt"]
-[ext_resource type="Script" uid="uid://dgslvq6lnmequ" path="res://Scenes/main_menu.gd" id="1_n45e2"]
+[ext_resource type="Script" uid="uid://dgslvq6lnmequ" path="res://Scripts/main_menu.gd" id="1_n45e2"]
 [ext_resource type="AudioStream" uid="uid://casu144yoarl8" path="res://Assets/Audio/neblasaveroom.wav" id="2_48xlc"]
 [ext_resource type="Texture2D" uid="uid://vnmrsgd3jaiy" path="res://Assets/Art/Screenshot 2026-05-14 153733.png" id="3_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://cwnvorotwdi0" path="res://Assets/Art/Chefborg.png" id="4_n45e2"]

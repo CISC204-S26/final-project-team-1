@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clxaiqyssj0ly"]
 
-[ext_resource type="Script" uid="uid://bu6unwcfk7rpq" path="res://Scenes/pause.gd" id="1_o80xk"]
+[ext_resource type="Script" uid="uid://bu6unwcfk7rpq" path="res://Scripts/pause.gd" id="1_o80xk"]
 
 [node name="Pause" type="Control" unique_id=624732853]
 z_index = 15

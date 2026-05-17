@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://b20t4u6vvbc5n"]
 
+[ext_resource type="Script" uid="uid://dd5nl6yycqg51" path="res://Scripts/globals.gd" id="1_gh04y"]
 [ext_resource type="PackedScene" uid="uid://cw4v1y7j6cgdi" path="res://Scenes/enemy.tscn" id="1_ig8kq"]
 [ext_resource type="PackedScene" uid="uid://b04x57uy3fuwt" path="res://Scenes/usb_stick.tscn" id="1_n0xin"]
 [ext_resource type="PackedScene" uid="uid://ugepxpgrh1y6" path="res://Scenes/player.tscn" id="1_nl3pl"]
 [ext_resource type="Texture2D" uid="uid://b8s1ptfp0snli" path="res://Assets/Textures/blue_metal_plate_4k.blend/textures/blue_metal_plate_diff_4k.jpg" id="1_qfcyl"]
 [ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
+[ext_resource type="Script" uid="uid://daivr7i1p25n5" path="res://Scenes/button.gd" id="5_c6bg5"]
 [ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0xin"]
@@ -50,6 +52,9 @@ backlight = Color(0.18932319, 0.6652849, 2.117753e-06, 1)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ig8kq"]
 
 [node name="Engineering Maze" type="Node3D" unique_id=1354805339]
+
+[node name="Globals" type="Node" parent="." unique_id=12336472]
+script = ExtResource("1_gh04y")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1597756771]
 transform = Transform3D(-0.9963435, 0.08540952, -0.0022036324, -0.0016297457, 0.006788379, 0.9999756, 0.0854224, 0.9963228, -0.0066243615, 0, 132.70953, 0)
@@ -216,6 +221,9 @@ material = ExtResource("2_ousgv")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 14.9825945, 0.9382496, 3.847538)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 1
+button_number = 1
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup1/Button7" unique_id=97600508]
 
@@ -227,6 +235,10 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 15.889235, 0.9382496, 3.847538)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 1
+button_number = 2
+target = true
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup1/Button8" unique_id=1544127118]
 
@@ -240,6 +252,9 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 13.109945)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 2
+button_number = 1
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button3" unique_id=1392753121]
 
@@ -251,6 +266,9 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 13.642037)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 2
+button_number = 2
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button4" unique_id=177556536]
 
@@ -262,6 +280,9 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 14.153362)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 2
+button_number = 3
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button5" unique_id=366360036]
 
@@ -273,6 +294,10 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 14.731097)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 2
+button_number = 4
+target = true
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button6" unique_id=127927338]
 
@@ -284,6 +309,9 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.641413, 0.9382496, 15.305027)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 2
+button_number = 5
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button7" unique_id=71677698]
 
@@ -297,6 +325,9 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 1.7681897, 0.9382496, 5.8476796)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 3
+button_number = 1
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button3" unique_id=876678646]
 
@@ -308,17 +339,24 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 2.1515872, 0.9382496, 5.8476796)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 3
+button_number = 2
+target = true
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button4" unique_id=632817681]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup3/Button4/Button3Area" unique_id=213140445]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
+transform = Transform3D(0.99999994, 0, -1.8626451e-09, 0, 0.99999994, 0, 2.7939677e-09, 0, 1.0000001, -0.1016345, 0.0017089844, 0.0015060902)
 shape = SubResource("BoxShape3D_nl3pl")
 
 [node name="Button5" type="CSGBox3D" parent="Q1/Puzzle1/ButtonGroup3" unique_id=1576601493]
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 2.5237994, 0.9382496, 5.8476796)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+script = ExtResource("5_c6bg5")
+button_group = 3
+button_number = 3
 
 [node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button5" unique_id=1078468478]
 

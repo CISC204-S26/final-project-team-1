@@ -16,7 +16,7 @@ func cam_down():
 	turn.look_vert(30)
 
 func _physics_process(delta):
-	print(camera_pivot.rotation.x)
+	#print(camera_pivot.rotation.x)
 	move_and_slide() ## Move and Slide
 	
 	if Input.is_action_just_pressed("camera_left"):

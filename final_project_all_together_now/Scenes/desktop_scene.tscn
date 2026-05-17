@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cymidqtbpvxhi"]
 
 [ext_resource type="FontFile" uid="uid://xfhm4sbqqmn1" path="res://Assets/fonts/connection_ii/ConnectionII.otf" id="1_dbpbn"]
-[ext_resource type="Script" uid="uid://ckcrt223k4yqo" path="res://desktop_programs.gd" id="1_s4js6"]
+[ext_resource type="Script" uid="uid://ckcrt223k4yqo" path="res://Scripts/desktop_programs.gd" id="1_s4js6"]
 [ext_resource type="Texture2D" uid="uid://5vjcs6capgdw" path="res://Assets/Art/computer visuals/enterIcon.png" id="3_qhj61"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbpbn"]

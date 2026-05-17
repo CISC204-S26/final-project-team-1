@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bf0pwptigx8ri"]
 
-[ext_resource type="Script" uid="uid://ckcrt223k4yqo" path="res://desktop_programs.gd" id="1_2d6cc"]
+[ext_resource type="Script" uid="uid://ckcrt223k4yqo" path="res://Scripts/desktop_programs.gd" id="1_2d6cc"]
 [ext_resource type="Texture2D" uid="uid://gaiu5xkbcgln" path="res://Assets/Art/computer visuals/Pealecake1818.jpg" id="2_ne0nj"]
 [ext_resource type="Texture2D" uid="uid://dgu73pcfyinl7" path="res://Assets/Art/computer visuals/03_dish_pile.png" id="3_gt5pt"]
 [ext_resource type="Texture2D" uid="uid://cq1bsrjl1kbru" path="res://Assets/Art/computer visuals/91_strawberrycake_dish.png" id="3_nbhij"]
