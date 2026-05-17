@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw4v1y7j6cgdi"]
 
-[ext_resource type="Script" uid="uid://c7dpel7aic5hn" path="res://Scenes/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://c7dpel7aic5hn" path="res://Scripts/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://c0qq1hwedelaj" path="res://Assets/Art/ChefMiku.png" id="1_7k104"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4gyqm"]

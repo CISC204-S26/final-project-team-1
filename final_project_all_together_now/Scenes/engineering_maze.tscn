@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b8s1ptfp0snli" path="res://Assets/Textures/blue_metal_plate_4k.blend/textures/blue_metal_plate_diff_4k.jpg" id="1_qfcyl"]
 [ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
-[ext_resource type="Script" uid="uid://daivr7i1p25n5" path="res://Scenes/button.gd" id="5_c6bg5"]
+[ext_resource type="Script" uid="uid://daivr7i1p25n5" path="res://Scripts/button.gd" id="5_c6bg5"]
 [ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0xin"]
