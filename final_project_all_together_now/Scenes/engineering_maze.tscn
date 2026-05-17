@@ -47,6 +47,8 @@ clearcoat_roughness = 1.0
 backlight_enabled = true
 backlight = Color(0.18932319, 0.6652849, 2.117753e-06, 1)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ig8kq"]
+
 [node name="Engineering Maze" type="Node3D" unique_id=1354805339]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1597756771]
@@ -778,3 +780,10 @@ material = SubResource("StandardMaterial3D_10on7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28089523, 0.020041823, -0.15150642)
 size = Vector3(0.3076172, 0.036132813, 0.11816406)
 material = ExtResource("2_ousgv")
+
+[node name="ButtonArea" type="Area3D" parent="." unique_id=14896093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.069746, 0, -19.352608)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ButtonArea" unique_id=1916140341]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0.115198135, 0.8915367, 0.166399)
+shape = SubResource("CylinderShape3D_ig8kq")
