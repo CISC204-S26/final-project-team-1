@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clxaiqyssj0ly"]
 
 [ext_resource type="Script" uid="uid://bu6unwcfk7rpq" path="res://Scripts/pause.gd" id="1_o80xk"]
+[ext_resource type="VideoStream" uid="uid://bl4uoddfduuhd" path="res://Assets/Video/Old TV static.ogv" id="2_l2mpd"]
 
 [node name="Pause" type="Control" unique_id=624732853]
 z_index = 15
@@ -12,11 +13,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o80xk")
 
-[node name="TempBG" type="ColorRect" parent="." unique_id=923709241]
-visible = false
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1410586852]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stream = ExtResource("2_l2mpd")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
