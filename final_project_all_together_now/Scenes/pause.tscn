@@ -163,6 +163,8 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
 text = "     -     SHUT DOWN          "
 
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Reconnect" to="." method="_on_reconnect_pressed"]
 [connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Master/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/ShutDown" to="." method="_on_shut_down_pressed"]

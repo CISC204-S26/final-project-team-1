@@ -37,3 +37,11 @@ func _on_music_slider_value_changed(value: float) -> void:
 func _on_sfx_slider_value_changed(value: float) -> void:
 	var db = linear_to_db(value)
 	AudioServer.set_bus_volume_db(sfx_bus_id, db)
+
+
+func _on_reconnect_pressed() -> void:
+	Globals.paused = !Globals.paused
+
+
+func _on_shut_down_pressed() -> void:
+	get_tree().quit()
