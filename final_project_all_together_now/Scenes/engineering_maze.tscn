@@ -77,6 +77,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.571306, -4.7683716e-07, -
 [node name="Player" parent="." unique_id=868634589 instance=ExtResource("1_nl3pl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.206839, 0.13112628, 23.343609)
 collision_layer = 3
+move_speed = 500
+gravity = -30
 
 [node name="Base" type="Node" parent="." unique_id=1166597071]
 
@@ -880,3 +882,5 @@ script = ExtResource("13_x58x3")
 
 [connection signal="body_entered" from="ButtonArea" to="." method="_on_button_area_body_entered"]
 [connection signal="body_exited" from="ButtonArea" to="." method="_on_button_area_body_exited"]
+
+[editable path="Enemy"]

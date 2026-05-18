@@ -60,3 +60,12 @@ func _physics_process(delta):
 	
 	if is_starting_jump:
 		velocity.y += jump_impulse
+
+
+func _on_inteactable_area_inter_area_entered(area: Area3D) -> void:
+	if $"../Enemy/EnemyCollisionArea":
+		print("you dead")
+		die()
+		
+func die():
+		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
