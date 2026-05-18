@@ -475,7 +475,6 @@ theme_override_colors/font_placeholder_color = Color(0.28485042, 0.28485024, 0.2
 theme_override_fonts/font = ExtResource("4_ne0nj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_12a1k")
-placeholder_text = "ദ്ദി(˵ •̀ᴗ - ˵ ) "
 caret_blink = true
 
 [node name="finalEnterButton" type="Button" parent="passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal" unique_id=524508640]
