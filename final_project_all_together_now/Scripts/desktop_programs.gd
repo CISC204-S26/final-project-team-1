@@ -14,6 +14,7 @@ func _process(_delta: float) -> void:
 func _on_map_button_pressed():
 	print("You clicked the Map!")
 	$mapProgram/mapBkgd.show()
+## todo - add mini map to window
 
 func _on_power_supply_button_pressed():
 	print("You clicked the Power Supply!")
@@ -33,6 +34,7 @@ func _on_turning_button_pressed():
 func _on_files_button_pressed():
 	print("You clicked the Files!")
 	$filesProgram/fileBkgd.show()
+## todo - add file repository (saved/encountered passwords/codes/etc)
 
 func _on_exit_button_pressed():
 	print("You closed the program!")
@@ -68,17 +70,51 @@ func _on_enter_button_pressed():
 func _on_playbutton_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
+func _on_q_1_button_pressed() -> void:
+	if Globals.active: 
+		if Globals.correct:
+			Globals.pressed += 1
+			print(Globals.pressed)
+			Globals.correct = false
+		else:
+			print("ded")
+	print("Left mouse button clicked on the area")
+	if Globals.pressed == 3:
+		$powerSupplyProgram/powerSupplyBkgd/q1Instructions.hide()
+		$powerSupplyProgram/powerSupplyBkgd/q2Instructions.show()
 
-func _on_final_enter_button_pressed():
-	print("You clicked to submit the last password!")
-	if $passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.text == "Password":
-		get_tree().change_scene_to_file("")
+func _on_orange_button_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "orange"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_orange_button_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)
 
-	else: if $passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.text == "password":
-		get_tree().change_scene_to_file("")
-
-	else: 
-		$passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.add_theme_color_override("background_color", "red")
-		await get_tree().create_timer(.25).timeout 
-		$passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.add_theme_color_override("background_color", Color(0, 0, 0, 0))
+func _on_red_button_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "red"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_red_button_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)
 	
+func _on_purple_button_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "purple"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_purple_button_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)
+
+func _on_greenbutton_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "green"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_greenbutton_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)

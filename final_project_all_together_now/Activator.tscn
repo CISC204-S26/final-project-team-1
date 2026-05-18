@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c61y2k4737sk8"]
+
+[ext_resource type="Texture2D" uid="uid://cbabnnvysfvv1" path="res://Assets/Art/computer visuals/blueButton.png" id="2_qs4c4"]
+
+[node name="activator" type="Node2D" unique_id=2057075947]
+
+[node name="buttonIcon" type="Sprite2D" parent="." unique_id=1608482702]
+scale = Vector2(3.1414456, 3.1414468)
+texture = ExtResource("2_qs4c4")
