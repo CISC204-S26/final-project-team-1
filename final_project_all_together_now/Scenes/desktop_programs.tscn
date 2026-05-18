@@ -15,6 +15,24 @@
 [ext_resource type="Texture2D" uid="uid://cbabnnvysfvv1" path="res://Assets/Art/computer visuals/blueButton.png" id="13_230a8"]
 [ext_resource type="Texture2D" uid="uid://dt5tow4hcr5up" path="res://Assets/Art/computer visuals/purpleButton.png" id="14_12a1k"]
 [ext_resource type="Texture2D" uid="uid://4lnodryhvgby" path="res://Assets/Art/computer visuals/greenButton.png" id="15_2pv8h"]
+[ext_resource type="Texture2D" uid="uid://dhegcfefy2vp8" path="res://Assets/Art/computer visuals/leftIcon.png" id="16_12a1k"]
+[ext_resource type="Texture2D" uid="uid://5vjcs6capgdw" path="res://Assets/Art/computer visuals/enterIcon.png" id="17_2pv8h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12a1k"]
+content_margin_left = 10.0
+bg_color = Color(0.7764706, 0.7764706, 0.7764706, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
+border_blend = true
+
+[ext_resource type="PackedScene" uid="uid://c61y2k4737sk8" path="res://Activator.tscn" id="11_yj2ve"]
+[ext_resource type="PackedScene" uid="uid://42s1uyjkl7j2" path="res://Scenes/Switches/orangeSwitch.tscn" id="13_2pv8h"]
+[ext_resource type="PackedScene" uid="uid://cv3k8sb5pb3ma" path="res://Scenes/Switches/redSwitch.tscn" id="13_12a1k"]
+[ext_resource type="PackedScene" uid="uid://cjhkg6ts72jvs" path="res://Scenes/Switches/purpleSwitch.tscn" id="14_2pv8h"]
+[ext_resource type="PackedScene" uid="uid://bf4uq3m8qtngk" path="res://Scenes/Switches/greenSwitch.tscn" id="15_lpnea"]
 
 [node name="Desktop programs" type="Node" unique_id=1319678193]
 script = ExtResource("1_2d6cc")
@@ -283,16 +301,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -163.263
-offset_top = -160.0
-offset_right = 199.8949
-offset_bottom = -69.47366
+offset_left = -247.63159
+offset_top = -284.2105
+offset_right = 252.36847
+offset_bottom = -193.68416
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_ne0nj")
 theme_override_font_sizes/font_size = 40
 text = "Press the button to activate! "
-autowrap_mode = 1
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="q1Button" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions" unique_id=758621540]
 self_modulate = Color(1, 1, 1, 0)
@@ -302,10 +321,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -96.31595
-offset_top = 104.73683
-offset_right = 53.68405
-offset_bottom = 254.73683
+offset_left = -74.210556
+offset_top = 58.947334
+offset_right = 75.78946
+offset_bottom = 208.94733
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -317,37 +336,35 @@ scale = Vector2(3.1414456, 3.1414468)
 texture = ExtResource("13_230a8")
 
 [node name="q2Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=363894540]
-visible = false
 layout_mode = 0
-offset_left = 82.894745
-offset_top = 120.0
-offset_right = 571.31586
-offset_bottom = 289.0
+offset_left = 57.63159
+offset_top = 316.8421
+offset_right = 546.05273
+offset_bottom = 485.8421
 theme_override_fonts/font = ExtResource("4_ne0nj")
 theme_override_font_sizes/font_size = 40
 text = "Hold down the buttons while Player 1 works on the wires "
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="orangeButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1629995771]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = -37.894745
-offset_top = 269.474
-offset_right = 62.105286
-offset_bottom = 369.474
+offset_left = -16.842112
+offset_top = 145.26318
+offset_right = 83.15792
+offset_bottom = 245.26318
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" unique_id=1385078617]
-position = Vector2(49.999985, 49.999695)
-scale = Vector2(2.0888157, 2.0888155)
-texture = ExtResource("12_yj2ve")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" unique_id=343297519 instance=ExtResource("13_2pv8h")]
+position = Vector2(50, 50)
 
 [node name="redButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1951105221]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 102.105255
-offset_top = 269.474
-offset_right = 202.10526
-offset_bottom = 369.474
+offset_left = 123.15788
+offset_top = 145.26318
+offset_right = 223.15788
+offset_bottom = 245.26318
 
 [node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" unique_id=354107176]
 position = Vector2(50, 49.47339)
@@ -357,28 +374,24 @@ texture = ExtResource("11_sc44x")
 [node name="purpleButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=777208503]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 237.10526
-offset_top = 269.474
-offset_right = 337.10526
-offset_bottom = 369.474
+offset_left = 258.1579
+offset_top = 145.26318
+offset_right = 358.1579
+offset_bottom = 245.26318
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" unique_id=1777326842]
-position = Vector2(50.263184, 49.999664)
-scale = Vector2(2.0723686, 2.0559216)
-texture = ExtResource("14_12a1k")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" unique_id=201393097 instance=ExtResource("14_2pv8h")]
+position = Vector2(50, 50)
 
 [node name="greenbutton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=489423792]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 372.10526
-offset_top = 269.474
-offset_right = 472.10526
-offset_bottom = 369.474
+offset_left = 393.1579
+offset_top = 145.26318
+offset_right = 493.1579
+offset_bottom = 245.26318
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" unique_id=1614391444]
-position = Vector2(50.00002, 49.999695)
-scale = Vector2(2.0723677, 2.0888171)
-texture = ExtResource("15_2pv8h")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" unique_id=1850055712 instance=ExtResource("15_lpnea")]
+position = Vector2(50, 50)
 
 [node name="passwordsProgram" type="CanvasLayer" parent="." unique_id=648729198]
 scale = Vector2(0.95, 0.95)
@@ -428,7 +441,53 @@ grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
-[node name="passwordBox" type="Node" parent="passwordsProgram/passwordsBkgd" unique_id=873551530]
+[node name="enterPassword" type="Label" parent="passwordsProgram/passwordsBkgd" unique_id=558522789]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.5
+offset_top = 150.0
+offset_right = 252.5
+offset_bottom = 210.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 60
+text = "Enter Password:"
+
+[node name="passwordBoxFinal" type="TextEdit" parent="passwordsProgram/passwordsBkgd/enterPassword" unique_id=430358302]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.5
+offset_top = 70.0
+offset_right = 132.5
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/caret_color = Color(0.10374334, 0.10374365, 0.10374341, 1)
+theme_override_colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+theme_override_colors/font_placeholder_color = Color(0.28485042, 0.28485024, 0.28485027, 1)
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_12a1k")
+caret_blink = true
+
+[node name="finalEnterButton" type="Button" parent="passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal" unique_id=524508640]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = -37.5
+offset_right = 375.0
+offset_bottom = 37.5
+grow_vertical = 2
+icon = ExtResource("17_2pv8h")
 
 [node name="turningProgram" type="CanvasLayer" parent="." unique_id=2117903046]
 scale = Vector2(0.95, 0.95)
@@ -477,6 +536,251 @@ offset_bottom = 73.0
 grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
+
+[node name="GridContainer" type="GridContainer" parent="turningProgram/turningBkgd" unique_id=2125231579]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 82.0
+offset_right = 566.0
+offset_bottom = 512.6316
+columns = 3
+
+[node name="section1" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=2037700279]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section1" unique_id=1999283870]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 410.52634
+offset_top = 180.0
+offset_right = 485.52634
+offset_bottom = 255.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section1" unique_id=1525279892]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 491.57895
+offset_top = 180.0
+offset_right = 566.579
+offset_bottom = 255.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section2" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1810522910]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section2" unique_id=1376467412]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 583.1579
+offset_top = 180.0
+offset_right = 658.1579
+offset_bottom = 255.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section2" unique_id=2052098416]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 665.2632
+offset_top = 180.0
+offset_right = 740.2632
+offset_bottom = 255.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section3" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=834034323]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section3" unique_id=1427425029]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 757.8947
+offset_top = 180.0
+offset_right = 832.8947
+offset_bottom = 255.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section3" unique_id=1184031829]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 840.00006
+offset_top = 180.0
+offset_right = 915.00006
+offset_bottom = 255.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section4" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1040440627]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section4" unique_id=24999778]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 410.5263
+offset_top = 320.0
+offset_right = 485.5263
+offset_bottom = 395.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section4" unique_id=273102173]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 491.57895
+offset_top = 320.0
+offset_right = 566.579
+offset_bottom = 395.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section5" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1248815786]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section5" unique_id=764614001]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 583.1579
+offset_top = 320.0
+offset_right = 658.1579
+offset_bottom = 395.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section5" unique_id=496908323]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 665.2632
+offset_top = 320.0
+offset_right = 740.26324
+offset_bottom = 395.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section6" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=997568597]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section6" unique_id=2100579112]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 757.8947
+offset_top = 320.0
+offset_right = 832.8947
+offset_bottom = 395.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section6" unique_id=1227563408]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 840.0
+offset_top = 320.0
+offset_right = 915.0
+offset_bottom = 395.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section7" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=906787205]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section7" unique_id=800915367]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 410.52634
+offset_top = 469.4737
+offset_right = 485.52634
+offset_bottom = 544.4737
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section7" unique_id=392943547]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 491.57895
+offset_top = 469.4737
+offset_right = 566.579
+offset_bottom = 544.4737
+icon = ExtResource("17_2pv8h")
+
+[node name="section8" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1594531010]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section8" unique_id=943916464]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 583.1579
+offset_top = 469.4737
+offset_right = 658.1579
+offset_bottom = 544.47375
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section8" unique_id=57061861]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 665.2632
+offset_top = 469.47366
+offset_right = 740.26324
+offset_bottom = 544.47363
+icon = ExtResource("17_2pv8h")
+
+[node name="section9" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=870841286]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section9" unique_id=1532479773]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 757.8947
+offset_top = 469.4737
+offset_right = 832.8947
+offset_bottom = 544.4737
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section9" unique_id=417431578]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 840.0
+offset_top = 469.4737
+offset_right = 915.0
+offset_bottom = 544.4737
+icon = ExtResource("17_2pv8h")
+
+[node name="Label" type="Label" parent="turningProgram/turningBkgd" unique_id=1378331298]
+layout_mode = 0
+offset_left = 23.947369
+offset_top = 24.210527
+offset_right = 579.7369
+offset_bottom = 64.210526
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+text = "Turn the maze pieces!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="filesProgram" type="CanvasLayer" parent="." unique_id=1149314988]
 scale = Vector2(0.95, 0.95)
@@ -528,7 +832,37 @@ grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
-[node name="fileDisplay" type="Node" parent="filesProgram/fileBkgd" unique_id=1743933818]
+[node name="ColorRect" type="ColorRect" parent="filesProgram/fileBkgd" unique_id=1707138061]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7141776, 0.82892376, 1, 0.3529412)
+
+[node name="Label" type="Label" parent="filesProgram/fileBkgd/ColorRect" unique_id=726997539]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.947
+offset_top = 100.0
+offset_right = 248.94778
+offset_bottom = 226.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+text = "What, you expected help? Psh, amateur. Good luck! "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="TextureRect/mapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="TextureRect/powerSupplyButton" to="." method="_on_power_supply_button_pressed"]
@@ -547,5 +881,6 @@ icon = ExtResource("9_t45mm")
 [connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_down"]
 [connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_up"]
 [connection signal="pressed" from="passwordsProgram/passwordsBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal/finalEnterButton" to="." method="_on_final_enter_button_pressed"]
 [connection signal="pressed" from="turningProgram/turningBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="filesProgram/fileBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]

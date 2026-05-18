@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+var is_dead = false
 @onready var camera_pivot = $CameraPivot
 
 @onready var turn = $CameraPivot/TurnCtrl
@@ -60,3 +61,14 @@ func _physics_process(delta):
 	
 	if is_starting_jump:
 		velocity.y += jump_impulse
+		
+		
+# Handles enemy touch game over -Clara
+func _on_inteactable_area_inter_area_entered(area: Area3D) -> void:
+	if $"../Enemy/EnemyCollisionArea":
+		print("you dead")
+		die()
+	
+# Handles game over after enemy touch, needs to change scene to game over scene (or just back to menu/ restart) -Clara
+func die():
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
