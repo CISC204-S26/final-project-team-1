@@ -277,7 +277,6 @@ scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
 [node name="q1Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=225783451]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -312,10 +311,10 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="buttonIcon" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" unique_id=1529564544]
-position = Vector2(75.26323, 75.26316)
+[node name="Sprite2D2" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" unique_id=1529564544]
+position = Vector2(75.263245, 75.26315)
 scale = Vector2(3.1414456, 3.1414468)
-texture = ExtResource("11_sc44x")
+texture = ExtResource("13_230a8")
 
 [node name="q2Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=363894540]
 visible = false
@@ -342,7 +341,7 @@ position = Vector2(49.999985, 49.999695)
 scale = Vector2(2.0888157, 2.0888155)
 texture = ExtResource("12_yj2ve")
 
-[node name="blueButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1951105221]
+[node name="redButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1951105221]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 102.105255
@@ -350,10 +349,10 @@ offset_top = 269.474
 offset_right = 202.10526
 offset_bottom = 369.474
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/blueButton" unique_id=354107176]
-position = Vector2(49.99999, 49.473396)
+[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" unique_id=354107176]
+position = Vector2(50, 49.47339)
 scale = Vector2(2.0888155, 2.0723686)
-texture = ExtResource("13_230a8")
+texture = ExtResource("11_sc44x")
 
 [node name="purpleButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=777208503]
 self_modulate = Color(1, 1, 1, 0)
@@ -538,6 +537,15 @@ icon = ExtResource("9_t45mm")
 [connection signal="pressed" from="TextureRect/filesButton" to="." method="_on_files_button_pressed"]
 [connection signal="pressed" from="mapProgram/mapBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="powerSupplyProgram/powerSupplyBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" to="." method="_on_q_1_button_pressed"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" to="." method="_on_orange_button_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" to="." method="_on_orange_button_button_up"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" to="." method="_on_red_button_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" to="." method="_on_red_button_button_up"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" to="." method="_on_purple_button_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" to="." method="_on_purple_button_button_up"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_up"]
 [connection signal="pressed" from="passwordsProgram/passwordsBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="turningProgram/turningBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="filesProgram/fileBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]

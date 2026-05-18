@@ -69,3 +69,54 @@ func _on_enter_button_pressed():
 
 func _on_playbutton_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+
+
+func _on_q_1_button_pressed() -> void:
+	if Globals.active: 
+		if Globals.correct:
+			Globals.pressed += 1
+			Globals.active = false
+			Globals.correct = false
+			print(Globals.pressed)
+		else:
+			print("ded")
+	print("Left mouse button clicked on the area")
+	if Globals.pressed == 3:
+		$powerSupplyProgram/powerSupplyBkgd/q1Instructions.hide()
+		$powerSupplyProgram/powerSupplyBkgd/q2Instructions.show()
+
+func _on_orange_button_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "orange"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_orange_button_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)
+
+func _on_red_button_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "red"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_red_button_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)
+
+func _on_purple_button_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "purple"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_purple_button_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)
+
+func _on_greenbutton_button_down() -> void:
+	Globals.powered = false
+	Globals.color = "green"
+	print("Mouse held down - ", Globals.powered, Globals.color)
+func _on_greenbutton_button_up() -> void:
+	Globals.powered = true
+	Globals.color = ""
+	print("Mouse released - ", Globals.powered, Globals.color)
