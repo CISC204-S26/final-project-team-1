@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cjmxn48tns7bt" path="res://Assets/Art/computer visuals/53_gingerbreadman_dish.png" id="7_t45mm"]
 [ext_resource type="Texture2D" uid="uid://bnpf50dd6h7ly" path="res://Assets/Art/computer visuals/closeButton.png" id="9_t45mm"]
 [ext_resource type="Texture2D" uid="uid://icknmwmwkpvu" path="res://Assets/Art/computer visuals/map.jpeg" id="10_kk4rg"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bxb8prqwhx2k4" path="res://Assets/Art/computer visuals/powerButton.png" id="11_sc44x"]
 [ext_resource type="Texture2D" uid="uid://irtvjcswynhj" path="res://Assets/Art/computer visuals/orangeButton.png" id="12_yj2ve"]
 [ext_resource type="Texture2D" uid="uid://cbabnnvysfvv1" path="res://Assets/Art/computer visuals/blueButton.png" id="13_230a8"]
@@ -29,6 +30,13 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
 border_blend = true
+=======
+[ext_resource type="PackedScene" uid="uid://c61y2k4737sk8" path="res://Activator.tscn" id="11_yj2ve"]
+[ext_resource type="PackedScene" uid="uid://42s1uyjkl7j2" path="res://Scenes/Switches/orangeSwitch.tscn" id="13_2pv8h"]
+[ext_resource type="PackedScene" uid="uid://cv3k8sb5pb3ma" path="res://Scenes/Switches/redSwitch.tscn" id="13_12a1k"]
+[ext_resource type="PackedScene" uid="uid://cjhkg6ts72jvs" path="res://Scenes/Switches/purpleSwitch.tscn" id="14_2pv8h"]
+[ext_resource type="PackedScene" uid="uid://bf4uq3m8qtngk" path="res://Scenes/Switches/greenSwitch.tscn" id="15_lpnea"]
+>>>>>>> Stashed changes
 
 [node name="Desktop programs" type="Node" unique_id=1319678193]
 script = ExtResource("1_2d6cc")
@@ -326,10 +334,8 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="buttonIcon" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" unique_id=1529564544]
-position = Vector2(75.26323, 75.26316)
-scale = Vector2(3.1414456, 3.1414468)
-texture = ExtResource("11_sc44x")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" unique_id=2057075947 instance=ExtResource("11_yj2ve")]
+position = Vector2(73.52629, 84.73685)
 
 [node name="q2Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=363894540]
 layout_mode = 0
@@ -351,12 +357,10 @@ offset_top = 145.26318
 offset_right = 83.15792
 offset_bottom = 245.26318
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" unique_id=1385078617]
-position = Vector2(49.999985, 49.999695)
-scale = Vector2(2.0888157, 2.0888155)
-texture = ExtResource("12_yj2ve")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" unique_id=343297519 instance=ExtResource("13_2pv8h")]
+position = Vector2(50, 50)
 
-[node name="blueButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1951105221]
+[node name="redButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1951105221]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 123.15788
@@ -364,10 +368,8 @@ offset_top = 145.26318
 offset_right = 223.15788
 offset_bottom = 245.26318
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/blueButton" unique_id=354107176]
-position = Vector2(49.99999, 49.473396)
-scale = Vector2(2.0888155, 2.0723686)
-texture = ExtResource("13_230a8")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" unique_id=1165323843 instance=ExtResource("13_12a1k")]
+position = Vector2(50, 50)
 
 [node name="purpleButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=777208503]
 self_modulate = Color(1, 1, 1, 0)
@@ -377,10 +379,8 @@ offset_top = 145.26318
 offset_right = 358.1579
 offset_bottom = 245.26318
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" unique_id=1777326842]
-position = Vector2(50.263184, 49.999664)
-scale = Vector2(2.0723686, 2.0559216)
-texture = ExtResource("14_12a1k")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" unique_id=201393097 instance=ExtResource("14_2pv8h")]
+position = Vector2(50, 50)
 
 [node name="greenbutton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=489423792]
 self_modulate = Color(1, 1, 1, 0)
@@ -390,10 +390,8 @@ offset_top = 145.26318
 offset_right = 493.1579
 offset_bottom = 245.26318
 
-[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" unique_id=1614391444]
-position = Vector2(50.00002, 49.999695)
-scale = Vector2(2.0723677, 2.0888171)
-texture = ExtResource("15_2pv8h")
+[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" unique_id=1850055712 instance=ExtResource("15_lpnea")]
+position = Vector2(50, 50)
 
 [node name="passwordsProgram" type="CanvasLayer" parent="." unique_id=648729198]
 scale = Vector2(0.95, 0.95)
@@ -892,6 +890,15 @@ loop = true
 [connection signal="pressed" from="TextureRect/filesButton" to="." method="_on_files_button_pressed"]
 [connection signal="pressed" from="mapProgram/mapBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="powerSupplyProgram/powerSupplyBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" to="." method="_on_q_1_button_pressed"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" to="." method="_on_orange_button_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" to="." method="_on_orange_button_button_up"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" to="." method="_on_red_button_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" to="." method="_on_red_button_button_up"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" to="." method="_on_purple_button_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" to="." method="_on_purple_button_button_up"]
+[connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_down"]
+[connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_up"]
 [connection signal="pressed" from="passwordsProgram/passwordsBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="turningProgram/turningBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="filesProgram/fileBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]

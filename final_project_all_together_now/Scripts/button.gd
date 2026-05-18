@@ -20,6 +20,7 @@ func _process(_delta: float) -> void:
 			Globals.active = true
 			if target:
 				Globals.correct = true
+				target = false
 			else:
 				Globals.correct = false
 			print(Globals.correct)
