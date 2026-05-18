@@ -63,7 +63,7 @@ func _physics_process(delta):
 
 
 func _on_inteactable_area_inter_area_entered(area: Area3D) -> void:
-	if $"../Enemy/EnemyCollisionArea":
+	if area == $"../Enemy/EnemyCollisionArea":
 		print("you dead")
 		die()
 		
