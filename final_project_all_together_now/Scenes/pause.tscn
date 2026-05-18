@@ -17,6 +17,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_behavior_recursive = 2
 script = ExtResource("1_o80xk")
+master_bus_name = "Master"
+music_bus_name = "Music"
+sfx_bus_name = "SFX"
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1410586852]
 layout_mode = 1
@@ -97,6 +100,9 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_behavior_recursive = 2
+max_value = 1.5
+step = 0.05
+value = 0.8
 
 [node name="Music" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume" unique_id=2121427373]
 layout_mode = 2
@@ -119,6 +125,9 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_behavior_recursive = 2
+max_value = 1.5
+step = 0.05
+value = 0.8
 
 [node name="SFX" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume" unique_id=947769470]
 layout_mode = 2
@@ -141,6 +150,9 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_behavior_recursive = 2
+max_value = 1.5
+step = 0.05
+value = 0.8
 
 [node name="ShutDown" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1924309768]
 layout_mode = 2
@@ -150,3 +162,7 @@ theme_override_fonts/font = ExtResource("3_5a6ek")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
 text = "     -     SHUT DOWN          "
+
+[connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Master/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]

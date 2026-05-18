@@ -49,6 +49,7 @@ color = Color(0, 0, 0, 0)
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=583879499]
 stream = ExtResource("2_48xlc")
 volume_db = 10.0
+bus = &"Music"
 
 [node name="MenuAlignment" type="HBoxContainer" parent="." unique_id=37124602]
 layout_mode = 1
@@ -144,16 +145,19 @@ vertical_alignment = 2
 position = Vector2(-780, -240)
 stream = ExtResource("7_cp0ys")
 volume_db = -20.042
+bus = &"SFX"
 
 [node name="Wind" type="AudioStreamPlayer2D" parent="Title" unique_id=225921959]
 position = Vector2(-780, -240)
 stream = ExtResource("8_yhxw7")
 volume_db = -34.125
+bus = &"SFX"
 
 [node name="Beeps" type="AudioStreamPlayer2D" parent="Title" unique_id=1989078739]
 position = Vector2(-780, -240)
 stream = ExtResource("9_trj04")
 volume_db = -31.959
+bus = &"SFX"
 
 [connection signal="pressed" from="MenuAlignment/ButtonMargin/Buttons/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MenuAlignment/ButtonMargin/Buttons/Options" to="." method="_on_options_pressed"]

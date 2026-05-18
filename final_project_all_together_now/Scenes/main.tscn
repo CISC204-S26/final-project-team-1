@@ -71,3 +71,4 @@ render_target_update_mode = 4
 stream = ExtResource("2_bo1nx")
 volume_db = -3.792
 autoplay = true
+bus = &"Music"
