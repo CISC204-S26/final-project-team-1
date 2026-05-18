@@ -290,23 +290,23 @@ scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
 [node name="q1Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=225783451]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -163.263
-offset_top = -160.0
-offset_right = 199.8949
-offset_bottom = -69.47366
+offset_left = -247.63159
+offset_top = -284.2105
+offset_right = 252.36847
+offset_bottom = -193.68416
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_ne0nj")
 theme_override_font_sizes/font_size = 40
 text = "Press the button to activate! "
-autowrap_mode = 1
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="q1Button" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions" unique_id=758621540]
 self_modulate = Color(1, 1, 1, 0)
@@ -316,10 +316,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -96.31595
-offset_top = 104.73683
-offset_right = 53.68405
-offset_bottom = 254.73683
+offset_left = -74.210556
+offset_top = 58.947334
+offset_right = 75.78946
+offset_bottom = 208.94733
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -331,24 +331,24 @@ scale = Vector2(3.1414456, 3.1414468)
 texture = ExtResource("11_sc44x")
 
 [node name="q2Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=363894540]
-visible = false
 layout_mode = 0
-offset_left = 82.894745
-offset_top = 120.0
-offset_right = 571.31586
-offset_bottom = 289.0
+offset_left = 57.63159
+offset_top = 316.8421
+offset_right = 546.05273
+offset_bottom = 485.8421
 theme_override_fonts/font = ExtResource("4_ne0nj")
 theme_override_font_sizes/font_size = 40
 text = "Hold down the buttons while Player 1 works on the wires "
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="orangeButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1629995771]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = -37.894745
-offset_top = 269.474
-offset_right = 62.105286
-offset_bottom = 369.474
+offset_left = -16.842112
+offset_top = 145.26318
+offset_right = 83.15792
+offset_bottom = 245.26318
 
 [node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" unique_id=1385078617]
 position = Vector2(49.999985, 49.999695)
@@ -358,10 +358,10 @@ texture = ExtResource("12_yj2ve")
 [node name="blueButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1951105221]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 102.105255
-offset_top = 269.474
-offset_right = 202.10526
-offset_bottom = 369.474
+offset_left = 123.15788
+offset_top = 145.26318
+offset_right = 223.15788
+offset_bottom = 245.26318
 
 [node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/blueButton" unique_id=354107176]
 position = Vector2(49.99999, 49.473396)
@@ -371,10 +371,10 @@ texture = ExtResource("13_230a8")
 [node name="purpleButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=777208503]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 237.10526
-offset_top = 269.474
-offset_right = 337.10526
-offset_bottom = 369.474
+offset_left = 258.1579
+offset_top = 145.26318
+offset_right = 358.1579
+offset_bottom = 245.26318
 
 [node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" unique_id=1777326842]
 position = Vector2(50.263184, 49.999664)
@@ -384,10 +384,10 @@ texture = ExtResource("14_12a1k")
 [node name="greenbutton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=489423792]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 372.10526
-offset_top = 269.474
-offset_right = 472.10526
-offset_bottom = 369.474
+offset_left = 393.1579
+offset_top = 145.26318
+offset_right = 493.1579
+offset_bottom = 245.26318
 
 [node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" unique_id=1614391444]
 position = Vector2(50.00002, 49.999695)
