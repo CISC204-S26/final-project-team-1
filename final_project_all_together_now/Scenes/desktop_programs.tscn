@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cbabnnvysfvv1" path="res://Assets/Art/computer visuals/blueButton.png" id="13_230a8"]
 [ext_resource type="Texture2D" uid="uid://dt5tow4hcr5up" path="res://Assets/Art/computer visuals/purpleButton.png" id="14_12a1k"]
 [ext_resource type="Texture2D" uid="uid://4lnodryhvgby" path="res://Assets/Art/computer visuals/greenButton.png" id="15_2pv8h"]
+[ext_resource type="Texture2D" uid="uid://dhegcfefy2vp8" path="res://Assets/Art/computer visuals/leftIcon.png" id="16_12a1k"]
+[ext_resource type="Texture2D" uid="uid://5vjcs6capgdw" path="res://Assets/Art/computer visuals/enterIcon.png" id="17_2pv8h"]
 
 [node name="Desktop programs" type="Node" unique_id=1319678193]
 script = ExtResource("1_2d6cc")
@@ -429,8 +431,6 @@ grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
-[node name="passwordBox" type="Node" parent="passwordsProgram/passwordsBkgd" unique_id=873551530]
-
 [node name="turningProgram" type="CanvasLayer" parent="." unique_id=2117903046]
 scale = Vector2(0.95, 0.95)
 transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
@@ -478,6 +478,251 @@ offset_bottom = 73.0
 grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
+
+[node name="GridContainer" type="GridContainer" parent="turningProgram/turningBkgd" unique_id=2125231579]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 82.0
+offset_right = 566.0
+offset_bottom = 512.6316
+columns = 3
+
+[node name="section1" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=2037700279]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section1" unique_id=1999283870]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 410.52634
+offset_top = 180.0
+offset_right = 485.52634
+offset_bottom = 255.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section1" unique_id=1525279892]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 491.57895
+offset_top = 180.0
+offset_right = 566.579
+offset_bottom = 255.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section2" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1810522910]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section2" unique_id=1376467412]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 583.1579
+offset_top = 180.0
+offset_right = 658.1579
+offset_bottom = 255.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section2" unique_id=2052098416]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 665.2632
+offset_top = 180.0
+offset_right = 740.2632
+offset_bottom = 255.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section3" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=834034323]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section3" unique_id=1427425029]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 757.8947
+offset_top = 180.0
+offset_right = 832.8947
+offset_bottom = 255.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section3" unique_id=1184031829]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 840.00006
+offset_top = 180.0
+offset_right = 915.00006
+offset_bottom = 255.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section4" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1040440627]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section4" unique_id=24999778]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 410.5263
+offset_top = 320.0
+offset_right = 485.5263
+offset_bottom = 395.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section4" unique_id=273102173]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 491.57895
+offset_top = 320.0
+offset_right = 566.579
+offset_bottom = 395.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section5" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1248815786]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section5" unique_id=764614001]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 583.1579
+offset_top = 320.0
+offset_right = 658.1579
+offset_bottom = 395.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section5" unique_id=496908323]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 665.2632
+offset_top = 320.0
+offset_right = 740.26324
+offset_bottom = 395.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section6" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=997568597]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section6" unique_id=2100579112]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 757.8947
+offset_top = 320.0
+offset_right = 832.8947
+offset_bottom = 395.0
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section6" unique_id=1227563408]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 840.0
+offset_top = 320.0
+offset_right = 915.0
+offset_bottom = 395.0
+icon = ExtResource("17_2pv8h")
+
+[node name="section7" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=906787205]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section7" unique_id=800915367]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 410.52634
+offset_top = 469.4737
+offset_right = 485.52634
+offset_bottom = 544.4737
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section7" unique_id=392943547]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 491.57895
+offset_top = 469.4737
+offset_right = 566.579
+offset_bottom = 544.4737
+icon = ExtResource("17_2pv8h")
+
+[node name="section8" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=1594531010]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section8" unique_id=943916464]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 583.1579
+offset_top = 469.4737
+offset_right = 658.1579
+offset_bottom = 544.47375
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section8" unique_id=57061861]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 665.2632
+offset_top = 469.47366
+offset_right = 740.26324
+offset_bottom = 544.47363
+icon = ExtResource("17_2pv8h")
+
+[node name="section9" type="ColorRect" parent="turningProgram/turningBkgd/GridContainer" unique_id=870841286]
+self_modulate = Color(0.5783978, 0.8009502, 1, 0.5019608)
+custom_minimum_size = Vector2(170, 140)
+layout_mode = 2
+
+[node name="leftTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section9" unique_id=1532479773]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 757.8947
+offset_top = 469.4737
+offset_right = 832.8947
+offset_bottom = 544.4737
+icon = ExtResource("16_12a1k")
+
+[node name="rightTurnButton" type="Button" parent="turningProgram/turningBkgd/GridContainer/section9" unique_id=417431578]
+top_level = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 840.0
+offset_top = 469.4737
+offset_right = 915.0
+offset_bottom = 544.4737
+icon = ExtResource("17_2pv8h")
+
+[node name="Label" type="Label" parent="turningProgram/turningBkgd" unique_id=1378331298]
+layout_mode = 0
+offset_left = 23.947369
+offset_top = 24.210527
+offset_right = 579.7369
+offset_bottom = 64.210526
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+text = "Turn the maze pieces!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="filesProgram" type="CanvasLayer" parent="." unique_id=1149314988]
 scale = Vector2(0.95, 0.95)
@@ -528,8 +773,6 @@ offset_bottom = 73.0
 grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
-
-[node name="fileDisplay" type="Node" parent="filesProgram/fileBkgd" unique_id=1743933818]
 
 [connection signal="pressed" from="TextureRect/mapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="TextureRect/powerSupplyButton" to="." method="_on_power_supply_button_pressed"]
