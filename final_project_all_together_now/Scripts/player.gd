@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+var game_over = false
 @onready var camera_pivot = $CameraPivot
 
 @onready var turn = $CameraPivot/TurnCtrl
@@ -60,3 +61,14 @@ func _physics_process(delta):
 	
 	if is_starting_jump:
 		velocity.y += jump_impulse
+		
+		
+# Handles enemy touch game over -Clara
+func _on_enemy_collision_area_area_entered(area: Area3D) -> void:
+	print("you dead")
+	game_over = true
+	
+# Handles game over after enemy touch, needs to change scene to game over scene (or just back to menu/ restart) -Clara
+func die():
+	if game_over == true:
+		$"Player".queue_free()

@@ -867,6 +867,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.11
 size = Vector3(1.5939636, 2.4641418, 0.2944336)
 
 [connection signal="area_entered" from="Enemy/EnemyCollisionArea" to="Player" method="_on_enemy_collision_area_area_entered"]
+[connection signal="area_entered" from="Player/InteactableAreaInter" to="Enemy" method="_on_inteactable_area_inter_area_entered"]
 [connection signal="body_entered" from="ButtonArea" to="." method="_on_button_area_body_entered"]
 [connection signal="body_exited" from="ButtonArea" to="." method="_on_button_area_body_exited"]
 
