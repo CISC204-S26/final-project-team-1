@@ -11,3 +11,5 @@ var pressed = 0
 var powered = true
 var color = ""
 var completed = 0
+
+var game_over = false

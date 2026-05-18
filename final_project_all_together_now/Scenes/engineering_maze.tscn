@@ -9,7 +9,6 @@
 [ext_resource type="Material" uid="uid://dw7l64b5nsg2u" path="res://Assets/Textures/Damaged_Iron_01-2/MI_Damaged_Iron_01.tres" id="2_ousgv"]
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
 [ext_resource type="Script" uid="uid://daivr7i1p25n5" path="res://Scripts/button.gd" id="5_c6bg5"]
-[ext_resource type="AudioStream" uid="uid://dq4nxpevyl4be" path="res://Assets/Audio/BreakChef2.mp3" id="5_gugie"]
 [ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
 [ext_resource type="Script" uid="uid://c326a1jkqrv7l" path="res://Scenes/wire_box.gd" id="8_3yqwl"]
 [ext_resource type="Script" uid="uid://c61ftm3guf2k" path="res://Scripts/door2.gd" id="13_gugie"]
@@ -73,21 +72,11 @@ light_volumetric_fog_energy = 5.0
 shadow_enabled = true
 
 [node name="Enemy" parent="." unique_id=740205272 instance=ExtResource("1_ig8kq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.19787, -4.7683716e-07, -13.817319)
-
-[node name="EnemyCollisionArea" parent="Enemy" index="3" unique_id=194484897]
-collision_layer = 7
-collision_mask = 7
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.571306, -4.7683716e-07, -15.3961)
 
 [node name="Player" parent="." unique_id=868634589 instance=ExtResource("1_nl3pl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.206839, 0.13112628, 23.343609)
 collision_layer = 3
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player" unique_id=859724333]
-stream = ExtResource("5_gugie")
-volume_db = 9.0
-autoplay = true
-parameters/looping = true
 
 [node name="Base" type="Node" parent="." unique_id=1166597071]
 
@@ -889,15 +878,5 @@ use_collision = true
 size = Vector3(1.5939636, 2.4641418, 0.2944336)
 script = ExtResource("13_x58x3")
 
-[node name="Q2ToQ4" type="CSGBox3D" parent="Doors" unique_id=8398434]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.888962, 0.7320709, -0.013556838)
-use_collision = true
-size = Vector3(1.8677979, 2.4641418, 0.2944336)
-script = ExtResource("13_gugie")
-
-[connection signal="area_entered" from="Player/InteactableAreaInter" to="Player" method="_on_inteactable_area_inter_area_entered"]
 [connection signal="body_entered" from="ButtonArea" to="." method="_on_button_area_body_entered"]
 [connection signal="body_exited" from="ButtonArea" to="." method="_on_button_area_body_exited"]
-
-[editable path="Enemy"]
-[editable path="Player"]
