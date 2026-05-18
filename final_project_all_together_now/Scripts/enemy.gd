@@ -12,7 +12,7 @@ func _physics_process(delta):
 
 	
 	
-func track_player(delta_):
+func track_player(delta):
 	## Directions to move to player's location, does not currently account for walls and such.
 	var dir = player.global_position - global_position
 	dir.y = 0.0
