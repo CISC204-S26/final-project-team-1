@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://4lnodryhvgby" path="res://Assets/Art/computer visuals/greenButton.png" id="15_2pv8h"]
 [ext_resource type="Texture2D" uid="uid://dhegcfefy2vp8" path="res://Assets/Art/computer visuals/leftIcon.png" id="16_12a1k"]
 [ext_resource type="Texture2D" uid="uid://5vjcs6capgdw" path="res://Assets/Art/computer visuals/enterIcon.png" id="17_2pv8h"]
-[ext_resource type="VideoStream" uid="uid://dvuyfsinjylqf" path="res://Assets/Art/computer visuals/rickroll-roll.ogv" id="18_2pv8h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12a1k"]
 content_margin_left = 10.0
@@ -863,24 +862,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="filesProgram/fileBkgd/ColorRect" unique_id=1336559887]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -127.63158
-offset_top = -259.47366
-offset_right = 512.3684
-offset_bottom = 380.52637
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.4, 0.4)
-stream = ExtResource("18_2pv8h")
-autoplay = true
-loop = true
-
 [connection signal="pressed" from="TextureRect/mapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="TextureRect/powerSupplyButton" to="." method="_on_power_supply_button_pressed"]
 [connection signal="pressed" from="TextureRect/passwordsButton" to="." method="_on_passwords_button_pressed"]
@@ -898,5 +879,6 @@ loop = true
 [connection signal="button_down" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_down"]
 [connection signal="button_up" from="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" to="." method="_on_greenbutton_button_up"]
 [connection signal="pressed" from="passwordsProgram/passwordsBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal/finalEnterButton" to="." method="_on_final_enter_button_pressed"]
 [connection signal="pressed" from="turningProgram/turningBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="filesProgram/fileBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
