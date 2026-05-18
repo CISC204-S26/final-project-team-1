@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://b1krwqmymm52a"]
-
-[ext_resource type="Texture2D" uid="uid://bxb8prqwhx2k4" path="res://Assets/Art/computer visuals/powerButton.png" id="1_pr4ng"]
-
-[node name="red" type="Node2D" unique_id=343297519]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=172881907]
-scale = Vector2(2.0888155, 2.0723686)
-texture = ExtResource("1_pr4ng")

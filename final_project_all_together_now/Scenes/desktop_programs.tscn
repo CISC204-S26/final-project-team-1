@@ -28,6 +28,7 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
 border_blend = true
+
 [ext_resource type="PackedScene" uid="uid://c61y2k4737sk8" path="res://Activator.tscn" id="11_yj2ve"]
 [ext_resource type="PackedScene" uid="uid://42s1uyjkl7j2" path="res://Scenes/Switches/orangeSwitch.tscn" id="13_2pv8h"]
 [ext_resource type="PackedScene" uid="uid://cv3k8sb5pb3ma" path="res://Scenes/Switches/redSwitch.tscn" id="13_12a1k"]
@@ -470,7 +471,6 @@ theme_override_colors/font_placeholder_color = Color(0.28485042, 0.28485024, 0.2
 theme_override_fonts/font = ExtResource("4_ne0nj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_12a1k")
-placeholder_text = "ദ്ദി(˵ •̀ᴗ - ˵ ) "
 caret_blink = true
 
 [node name="finalEnterButton" type="Button" parent="passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal" unique_id=524508640]
