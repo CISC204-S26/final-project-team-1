@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cjmxn48tns7bt" path="res://Assets/Art/computer visuals/53_gingerbreadman_dish.png" id="7_t45mm"]
 [ext_resource type="Texture2D" uid="uid://bnpf50dd6h7ly" path="res://Assets/Art/computer visuals/closeButton.png" id="9_t45mm"]
 [ext_resource type="Texture2D" uid="uid://icknmwmwkpvu" path="res://Assets/Art/computer visuals/map.jpeg" id="10_kk4rg"]
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bxb8prqwhx2k4" path="res://Assets/Art/computer visuals/powerButton.png" id="11_sc44x"]
 [ext_resource type="Texture2D" uid="uid://irtvjcswynhj" path="res://Assets/Art/computer visuals/orangeButton.png" id="12_yj2ve"]
 [ext_resource type="Texture2D" uid="uid://cbabnnvysfvv1" path="res://Assets/Art/computer visuals/blueButton.png" id="13_230a8"]
@@ -30,13 +29,12 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
 border_blend = true
-=======
+
 [ext_resource type="PackedScene" uid="uid://c61y2k4737sk8" path="res://Activator.tscn" id="11_yj2ve"]
 [ext_resource type="PackedScene" uid="uid://42s1uyjkl7j2" path="res://Scenes/Switches/orangeSwitch.tscn" id="13_2pv8h"]
 [ext_resource type="PackedScene" uid="uid://cv3k8sb5pb3ma" path="res://Scenes/Switches/redSwitch.tscn" id="13_12a1k"]
 [ext_resource type="PackedScene" uid="uid://cjhkg6ts72jvs" path="res://Scenes/Switches/purpleSwitch.tscn" id="14_2pv8h"]
 [ext_resource type="PackedScene" uid="uid://bf4uq3m8qtngk" path="res://Scenes/Switches/greenSwitch.tscn" id="15_lpnea"]
->>>>>>> Stashed changes
 
 [node name="Desktop programs" type="Node" unique_id=1319678193]
 script = ExtResource("1_2d6cc")

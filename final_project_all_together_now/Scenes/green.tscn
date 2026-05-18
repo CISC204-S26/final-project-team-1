@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://dtq2e8dk1y4qi"]
-
-[ext_resource type="Texture2D" uid="uid://4lnodryhvgby" path="res://Assets/Art/computer visuals/greenButton.png" id="1_ildiu"]
-
-[node name="green" type="Node2D" unique_id=343297519]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=64621273]
-scale = Vector2(2.0723677, 2.0888171)
-texture = ExtResource("1_ildiu")
