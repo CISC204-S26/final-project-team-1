@@ -12,8 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://dq4nxpevyl4be" path="res://Assets/Audio/BreakChef2.mp3" id="5_gugie"]
 [ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
 [ext_resource type="Script" uid="uid://c326a1jkqrv7l" path="res://Scenes/wire_box.gd" id="8_3yqwl"]
-[ext_resource type="Script" uid="uid://bxbt7mibj3ve7" path="res://Scripts/door1.gd" id="12_x58x3"]
-[ext_resource type="Script" uid="uid://f0apk7ad0y5k" path="res://Scripts/door2.gd" id="13_gugie"]
+[ext_resource type="Script" uid="uid://c61ftm3guf2k" path="res://Scripts/door2.gd" id="13_gugie"]
+[ext_resource type="Script" uid="uid://dx1lfvt0hnd2p" path="res://Scripts/door.gd" id="13_x58x3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0xin"]
 albedo_color = Color(0.23529412, 0.56078434, 0.19215687, 0.5372549)
@@ -871,17 +871,23 @@ shape = SubResource("CylinderShape3D_ig8kq")
 
 [node name="Doors" type="Node" parent="." unique_id=1922991926]
 
-[node name="Q1ToQ3" type="CSGBox3D" parent="Doors" unique_id=1725144178]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.385147, 0.7320709, -0.013556838)
+[node name="Q2ToQ4" type="CSGBox3D" parent="Doors" unique_id=8398434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.888962, 0.7320709, -0.013556838)
 use_collision = true
 size = Vector3(1.8677979, 2.4641418, 0.2944336)
-script = ExtResource("12_x58x3")
+script = ExtResource("13_gugie")
+
+[node name="Q1ToQ3" type="CSGBox3D" parent="Doors" unique_id=1194535205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.452705, 0.7320709, -0.013556838)
+use_collision = true
+size = Vector3(1.8677979, 2.4641418, 0.2944336)
+script = ExtResource("13_x58x3")
 
 [node name="Q1ToQ2" type="CSGBox3D" parent="Doors" unique_id=1756941795]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.11552478, 0.7320709, 4.0229)
 use_collision = true
 size = Vector3(1.5939636, 2.4641418, 0.2944336)
-script = ExtResource("12_x58x3")
+script = ExtResource("13_x58x3")
 
 [node name="Q2ToQ4" type="CSGBox3D" parent="Doors" unique_id=8398434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.888962, 0.7320709, -0.013556838)

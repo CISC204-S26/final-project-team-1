@@ -330,8 +330,10 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" unique_id=2057075947 instance=ExtResource("11_yj2ve")]
-position = Vector2(73.52629, 84.73685)
+[node name="Sprite2D2" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" unique_id=1529564544]
+position = Vector2(75.263245, 75.26315)
+scale = Vector2(3.1414456, 3.1414468)
+texture = ExtResource("13_230a8")
 
 [node name="q2Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=363894540]
 layout_mode = 0
@@ -364,8 +366,10 @@ offset_top = 145.26318
 offset_right = 223.15788
 offset_bottom = 245.26318
 
-[node name="Node2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" unique_id=1165323843 instance=ExtResource("13_12a1k")]
-position = Vector2(50, 50)
+[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/redButton" unique_id=354107176]
+position = Vector2(50, 49.47339)
+scale = Vector2(2.0888155, 2.0723686)
+texture = ExtResource("11_sc44x")
 
 [node name="purpleButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=777208503]
 self_modulate = Color(1, 1, 1, 0)

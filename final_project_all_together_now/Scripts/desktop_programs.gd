@@ -70,12 +70,14 @@ func _on_enter_button_pressed():
 func _on_playbutton_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
+
 func _on_q_1_button_pressed() -> void:
 	if Globals.active: 
 		if Globals.correct:
 			Globals.pressed += 1
-			print(Globals.pressed)
+			Globals.active = false
 			Globals.correct = false
+			print(Globals.pressed)
 		else:
 			print("ded")
 	print("Left mouse button clicked on the area")
@@ -100,7 +102,7 @@ func _on_red_button_button_up() -> void:
 	Globals.powered = true
 	Globals.color = ""
 	print("Mouse released - ", Globals.powered, Globals.color)
-	
+
 func _on_purple_button_button_down() -> void:
 	Globals.powered = false
 	Globals.color = "purple"
@@ -118,16 +120,3 @@ func _on_greenbutton_button_up() -> void:
 	Globals.powered = true
 	Globals.color = ""
 	print("Mouse released - ", Globals.powered, Globals.color)
-
-func _on_final_enter_button_pressed():
-	print("You clicked to submit the last password!")
-	if $passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.text == "Password":
-		get_tree().change_scene_to_file("")
-
-	else: if $passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.text == "password":
-		get_tree().change_scene_to_file("")
-
-	else: 
-		$passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.add_theme_color_override("background_color", "red")
-		await get_tree().create_timer(.25).timeout 
-		$passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.add_theme_color_override("background_color", Color(0, 0, 0, 0))
