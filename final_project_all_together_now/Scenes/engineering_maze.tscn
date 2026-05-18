@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://boha36cki4afj" path="res://Scripts/Components/turn_ctrl.gd" id="4_nl3pl"]
 [ext_resource type="Script" uid="uid://daivr7i1p25n5" path="res://Scripts/button.gd" id="5_c6bg5"]
 [ext_resource type="Texture2D" uid="uid://dp8gswbn8t40d" path="res://Assets/Art/WiresImage.png" id="6_c6bg5"]
+[ext_resource type="Script" uid="uid://c326a1jkqrv7l" path="res://Scenes/wire_box.gd" id="8_3yqwl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0xin"]
 albedo_color = Color(0.23529412, 0.56078434, 0.19215687, 0.5372549)
@@ -25,6 +26,8 @@ size = Vector3(0.3179245, 0.3383789, 0.275177)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig8kq"]
 albedo_color = Color(1, 0.30980393, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3yqwl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x58x3"]
 albedo_color = Color(1.6994185, 0.5973027, 0.12124073, 1)
@@ -224,11 +227,11 @@ material = ExtResource("2_ousgv")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 14.9825945, 0.9382496, 3.847538)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup1/Button7" unique_id=97600508]
 script = ExtResource("5_c6bg5")
 button_group = 1
 button_number = 1
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup1/Button7" unique_id=97600508]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup1/Button7/Button3Area" unique_id=1302429925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -238,12 +241,12 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 15.889235, 0.9382496, 3.847538)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup1/Button8" unique_id=1544127118]
 script = ExtResource("5_c6bg5")
 button_group = 1
 button_number = 2
 target = true
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup1/Button8" unique_id=1544127118]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup1/Button8/Button3Area" unique_id=1657447464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -255,11 +258,11 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 13.109945)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button3" unique_id=1392753121]
 script = ExtResource("5_c6bg5")
 button_group = 2
 button_number = 1
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button3" unique_id=1392753121]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup2/Button3/Button3Area" unique_id=677061748]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -269,11 +272,11 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 13.642037)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button4" unique_id=177556536]
 script = ExtResource("5_c6bg5")
 button_group = 2
 button_number = 2
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button4" unique_id=177556536]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup2/Button4/Button3Area" unique_id=23019470]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -283,11 +286,11 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 14.153362)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button5" unique_id=366360036]
 script = ExtResource("5_c6bg5")
 button_group = 2
 button_number = 3
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button5" unique_id=366360036]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup2/Button5/Button3Area" unique_id=508623885]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -297,12 +300,12 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.698498, 0.9382496, 14.731097)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button6" unique_id=127927338]
 script = ExtResource("5_c6bg5")
 button_group = 2
 button_number = 4
 target = true
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button6" unique_id=127927338]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup2/Button6/Button3Area" unique_id=516816131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -312,11 +315,11 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 19.641413, 0.9382496, 15.305027)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button7" unique_id=71677698]
 script = ExtResource("5_c6bg5")
 button_group = 2
 button_number = 5
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup2/Button7" unique_id=71677698]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup2/Button7/Button3Area" unique_id=1098512611]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -328,11 +331,11 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 1.7681897, 0.9382496, 5.8476796)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button3" unique_id=876678646]
 script = ExtResource("5_c6bg5")
 button_group = 3
 button_number = 1
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button3" unique_id=876678646]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup3/Button3/Button3Area" unique_id=1945771042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -342,12 +345,12 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 2.1515872, 0.9382496, 5.8476796)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button4" unique_id=632817681]
 script = ExtResource("5_c6bg5")
 button_group = 3
 button_number = 2
 target = true
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button4" unique_id=632817681]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup3/Button4/Button3Area" unique_id=213140445]
 transform = Transform3D(0.99999994, 0, -1.8626451e-09, 0, 0.99999994, 0, 2.7939677e-09, 0, 1.0000001, -0.1016345, 0.0017089844, 0.0015060902)
@@ -357,11 +360,11 @@ shape = SubResource("BoxShape3D_nl3pl")
 transform = Transform3D(0.008366409, 0, 0.6111644, 0, 0.5178118, 0, -0.9965671, 0, 0.005130865, 2.5237994, 0.9382496, 5.8476796)
 size = Vector3(0.30773926, 0.33203125, 0.28222656)
 material = SubResource("StandardMaterial3D_3yqwl")
+
+[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button5" unique_id=1078468478]
 script = ExtResource("5_c6bg5")
 button_group = 3
 button_number = 3
-
-[node name="Button3Area" type="Area3D" parent="Q1/Puzzle1/ButtonGroup3/Button5" unique_id=1078468478]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Q1/Puzzle1/ButtonGroup3/Button5/Button3Area" unique_id=817249616]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014154911, 0.0017089844, -7.915497e-05)
@@ -473,6 +476,14 @@ material = SubResource("StandardMaterial3D_ig8kq")
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
 texture = ExtResource("6_c6bg5")
 
+[node name="Area3D" type="Area3D" parent="Q2/WirePuzzleBoxes/PurpleWireBox" unique_id=684881133]
+script = ExtResource("8_3yqwl")
+color = "purple"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Q2/WirePuzzleBoxes/PurpleWireBox/Area3D" unique_id=11302571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7742591, 0, 0)
+shape = SubResource("BoxShape3D_3yqwl")
+
 [node name="OrangeWireBox" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=720645251]
 transform = Transform3D(0.015707336, 0, -0.9998766, 0, 1, 0, 0.9998766, 0, 0.015707336, -8.667918, 0.60366166, 19.34369)
 size = Vector3(0.48376465, 1.4541016, 2.0740356)
@@ -481,6 +492,14 @@ material = SubResource("StandardMaterial3D_x58x3")
 [node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/OrangeWireBox" unique_id=156473984]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
 texture = ExtResource("6_c6bg5")
+
+[node name="Area3D" type="Area3D" parent="Q2/WirePuzzleBoxes/OrangeWireBox" unique_id=608803501]
+script = ExtResource("8_3yqwl")
+color = "orange"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Q2/WirePuzzleBoxes/OrangeWireBox/Area3D" unique_id=397014396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7742591, 0, 0)
+shape = SubResource("BoxShape3D_3yqwl")
 
 [node name="RedWireBox" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1508198889]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -22.241259, 0.60366166, 16.996365)
@@ -491,6 +510,14 @@ material = SubResource("StandardMaterial3D_gugie")
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
 texture = ExtResource("6_c6bg5")
 
+[node name="Area3D" type="Area3D" parent="Q2/WirePuzzleBoxes/RedWireBox" unique_id=921978404]
+script = ExtResource("8_3yqwl")
+color = "red"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Q2/WirePuzzleBoxes/RedWireBox/Area3D" unique_id=1650016231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7742591, 0, 0)
+shape = SubResource("BoxShape3D_3yqwl")
+
 [node name="GreenWireBox" type="CSGBox3D" parent="Q2/WirePuzzleBoxes" unique_id=1771866194]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -27.058807, 0.60366166, 6.6717978)
 size = Vector3(0.77978516, 1.4541016, 2.0740356)
@@ -499,6 +526,14 @@ material = SubResource("StandardMaterial3D_gh04y")
 [node name="Sprite3D" type="Sprite3D" parent="Q2/WirePuzzleBoxes/GreenWireBox" unique_id=2131719165]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.3984332, 0, 0)
 texture = ExtResource("6_c6bg5")
+
+[node name="Area3D" type="Area3D" parent="Q2/WirePuzzleBoxes/GreenWireBox" unique_id=527050176]
+script = ExtResource("8_3yqwl")
+color = "green"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Q2/WirePuzzleBoxes/GreenWireBox/Area3D" unique_id=535290865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7742591, 0, 0)
+shape = SubResource("BoxShape3D_3yqwl")
 
 [node name="Q3" type="Node" parent="." unique_id=2037711400]
 

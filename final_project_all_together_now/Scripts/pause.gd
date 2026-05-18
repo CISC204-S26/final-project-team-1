@@ -13,7 +13,7 @@ func _ready():
 	music_bus_id = AudioServer.get_bus_index(music_bus_name)
 	sfx_bus_id = AudioServer.get_bus_index(sfx_bus_name)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.paused == true:
 		show()
 		$CanvasLayer.show()
