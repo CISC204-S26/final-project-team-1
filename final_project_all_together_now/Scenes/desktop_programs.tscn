@@ -10,6 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://cjmxn48tns7bt" path="res://Assets/Art/computer visuals/53_gingerbreadman_dish.png" id="7_t45mm"]
 [ext_resource type="Texture2D" uid="uid://bnpf50dd6h7ly" path="res://Assets/Art/computer visuals/closeButton.png" id="9_t45mm"]
 [ext_resource type="Texture2D" uid="uid://icknmwmwkpvu" path="res://Assets/Art/computer visuals/map.jpeg" id="10_kk4rg"]
+[ext_resource type="Texture2D" uid="uid://bxb8prqwhx2k4" path="res://Assets/Art/computer visuals/powerButton.png" id="11_sc44x"]
+[ext_resource type="Texture2D" uid="uid://irtvjcswynhj" path="res://Assets/Art/computer visuals/orangeButton.png" id="12_yj2ve"]
+[ext_resource type="Texture2D" uid="uid://cbabnnvysfvv1" path="res://Assets/Art/computer visuals/blueButton.png" id="13_230a8"]
+[ext_resource type="Texture2D" uid="uid://dt5tow4hcr5up" path="res://Assets/Art/computer visuals/purpleButton.png" id="14_12a1k"]
+[ext_resource type="Texture2D" uid="uid://4lnodryhvgby" path="res://Assets/Art/computer visuals/greenButton.png" id="15_2pv8h"]
 
 [node name="Desktop programs" type="Node" unique_id=1319678193]
 script = ExtResource("1_2d6cc")
@@ -271,7 +276,110 @@ grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
-[node name="controlButtons" type="Node" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=238064080]
+[node name="q1Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=225783451]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.263
+offset_top = -160.0
+offset_right = 199.8949
+offset_bottom = -69.47366
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+text = "Press the button to activate! "
+autowrap_mode = 1
+
+[node name="q1Button" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions" unique_id=758621540]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.31595
+offset_top = 104.73683
+offset_right = 53.68405
+offset_bottom = 254.73683
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="buttonIcon" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q1Instructions/q1Button" unique_id=1529564544]
+position = Vector2(75.26323, 75.26316)
+scale = Vector2(3.1414456, 3.1414468)
+texture = ExtResource("11_sc44x")
+
+[node name="q2Instructions" type="Label" parent="powerSupplyProgram/powerSupplyBkgd" unique_id=363894540]
+visible = false
+layout_mode = 0
+offset_left = 82.894745
+offset_top = 120.0
+offset_right = 571.31586
+offset_bottom = 289.0
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+text = "Hold down the buttons while Player 1 works on the wires "
+autowrap_mode = 2
+
+[node name="orangeButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1629995771]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -37.894745
+offset_top = 269.474
+offset_right = 62.105286
+offset_bottom = 369.474
+
+[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/orangeButton" unique_id=1385078617]
+position = Vector2(49.999985, 49.999695)
+scale = Vector2(2.0888157, 2.0888155)
+texture = ExtResource("12_yj2ve")
+
+[node name="blueButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=1951105221]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 102.105255
+offset_top = 269.474
+offset_right = 202.10526
+offset_bottom = 369.474
+
+[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/blueButton" unique_id=354107176]
+position = Vector2(49.99999, 49.473396)
+scale = Vector2(2.0888155, 2.0723686)
+texture = ExtResource("13_230a8")
+
+[node name="purpleButton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=777208503]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 237.10526
+offset_top = 269.474
+offset_right = 337.10526
+offset_bottom = 369.474
+
+[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/purpleButton" unique_id=1777326842]
+position = Vector2(50.263184, 49.999664)
+scale = Vector2(2.0723686, 2.0559216)
+texture = ExtResource("14_12a1k")
+
+[node name="greenbutton" type="Button" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions" unique_id=489423792]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 372.10526
+offset_top = 269.474
+offset_right = 472.10526
+offset_bottom = 369.474
+
+[node name="Sprite2D" type="Sprite2D" parent="powerSupplyProgram/powerSupplyBkgd/q2Instructions/greenbutton" unique_id=1614391444]
+position = Vector2(50.00002, 49.999695)
+scale = Vector2(2.0723677, 2.0888171)
+texture = ExtResource("15_2pv8h")
 
 [node name="passwordsProgram" type="CanvasLayer" parent="." unique_id=648729198]
 scale = Vector2(0.95, 0.95)
@@ -370,8 +478,6 @@ offset_bottom = 73.0
 grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
-
-[node name="turnControls" type="Node" parent="turningProgram/turningBkgd" unique_id=1318766358]
 
 [node name="filesProgram" type="CanvasLayer" parent="." unique_id=1149314988]
 scale = Vector2(0.95, 0.95)
