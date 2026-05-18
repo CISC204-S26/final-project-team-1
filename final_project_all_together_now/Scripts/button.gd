@@ -1,6 +1,5 @@
 extends Area3D
 
-@export var button_group = 0
 @export var button_number = 0
 @export var target = false
 
@@ -10,7 +9,7 @@ var player_in_range = false
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
-	print("Button", button_number, " Group", button_group)
+	print("Button", button_number)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,12 +18,13 @@ func _process(_delta: float) -> void:
 		if Input.is_action_just_pressed("KEY_" + str(button_number)):
 			print(str(button_number) + " pressed")
 			Globals.active = true
-			Globals.active_group = button_group
 			if target:
 				Globals.correct = true
 			else:
 				Globals.correct = false
 			print(Globals.correct)
+	if Globals.pressed == 3:
+		get_parent().queue_free()
 
 func _on_area_entered(area: Area3D) -> void:
 	player_in_range = true

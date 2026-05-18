@@ -2,9 +2,12 @@ extends Node
 
 var paused: bool
 
+#Q1
 var active = false
-var active_group = 0
 var correct = false
+var pressed = 0
 
+#Q2
 var powered = true
 var color = ""
+var completed = 0

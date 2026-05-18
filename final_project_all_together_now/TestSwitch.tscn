@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://42s1uyjkl7j2"]
+
+[ext_resource type="Script" uid="uid://bsvl7qlwn7ee7" path="res://switch.gd" id="1_4fnbp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwdnl"]
+
+[node name="Node2D" type="Node2D" unique_id=343297519]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=279285800]
+script = ExtResource("1_4fnbp")
+switch_color = "orange"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=330207688]
+position = Vector2(644, 316)
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_rwdnl")

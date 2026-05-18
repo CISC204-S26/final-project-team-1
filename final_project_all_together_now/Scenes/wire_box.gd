@@ -12,7 +12,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if player_in_range:
 		if Input.is_action_just_pressed("interact"):
-			if Globals.powered == false and Globals.color == color:
+			if Globals.powered == true and Globals.color == color:
+				Globals.completed += 1
 				get_parent().queue_free()
 			else:
 				print("ded")
