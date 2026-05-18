@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b41awm8d3kgwg"]
+
+[ext_resource type="Texture2D" uid="uid://irtvjcswynhj" path="res://Assets/Art/computer visuals/orangeButton.png" id="1_5wfdt"]
+
+[node name="orange" type="Node2D" unique_id=343297519]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1726123489]
+scale = Vector2(2.0888157, 2.0888155)
+texture = ExtResource("1_5wfdt")
