@@ -17,6 +17,17 @@
 [ext_resource type="Texture2D" uid="uid://4lnodryhvgby" path="res://Assets/Art/computer visuals/greenButton.png" id="15_2pv8h"]
 [ext_resource type="Texture2D" uid="uid://dhegcfefy2vp8" path="res://Assets/Art/computer visuals/leftIcon.png" id="16_12a1k"]
 [ext_resource type="Texture2D" uid="uid://5vjcs6capgdw" path="res://Assets/Art/computer visuals/enterIcon.png" id="17_2pv8h"]
+[ext_resource type="VideoStream" uid="uid://dvuyfsinjylqf" path="res://Assets/Art/computer visuals/rickroll-roll.ogv" id="18_2pv8h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12a1k"]
+content_margin_left = 10.0
+bg_color = Color(0.7764706, 0.7764706, 0.7764706, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.31431612, 0.31431612, 0.31431603, 1)
+border_blend = true
 
 [node name="Desktop programs" type="Node" unique_id=1319678193]
 script = ExtResource("1_2d6cc")
@@ -431,6 +442,55 @@ grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
+[node name="enterPassword" type="Label" parent="passwordsProgram/passwordsBkgd" unique_id=558522789]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.5
+offset_top = 150.0
+offset_right = 252.5
+offset_bottom = 210.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 60
+text = "Enter Password:"
+
+[node name="passwordBoxFinal" type="TextEdit" parent="passwordsProgram/passwordsBkgd/enterPassword" unique_id=430358302]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.5
+offset_top = 70.0
+offset_right = 132.5
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/caret_color = Color(0.10374334, 0.10374365, 0.10374341, 1)
+theme_override_colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+theme_override_colors/font_placeholder_color = Color(0.28485042, 0.28485024, 0.28485027, 1)
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_12a1k")
+placeholder_text = "ദ്ദി(˵ •̀ᴗ - ˵ ) "
+caret_blink = true
+
+[node name="finalEnterButton" type="Button" parent="passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal" unique_id=524508640]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = -37.5
+offset_right = 375.0
+offset_bottom = 37.5
+grow_vertical = 2
+icon = ExtResource("17_2pv8h")
+
 [node name="turningProgram" type="CanvasLayer" parent="." unique_id=2117903046]
 scale = Vector2(0.95, 0.95)
 transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
@@ -773,6 +833,56 @@ offset_bottom = 73.0
 grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
+
+[node name="ColorRect" type="ColorRect" parent="filesProgram/fileBkgd" unique_id=1707138061]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7141776, 0.82892376, 1, 0.3529412)
+
+[node name="Label" type="Label" parent="filesProgram/fileBkgd/ColorRect" unique_id=726997539]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.947
+offset_top = 100.0
+offset_right = 248.94778
+offset_bottom = 226.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+text = "What, you expected help? Psh, amateur. Good luck! "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="filesProgram/fileBkgd/ColorRect" unique_id=1336559887]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.63158
+offset_top = -259.47366
+offset_right = 512.3684
+offset_bottom = 380.52637
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+stream = ExtResource("18_2pv8h")
+autoplay = true
+loop = true
 
 [connection signal="pressed" from="TextureRect/mapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="TextureRect/powerSupplyButton" to="." method="_on_power_supply_button_pressed"]
