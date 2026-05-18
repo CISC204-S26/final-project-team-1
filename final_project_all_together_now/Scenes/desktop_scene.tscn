@@ -119,6 +119,7 @@ drag_and_drop_selection_enabled = false
 middle_mouse_paste_enabled = false
 autowrap_mode = 1
 tab_input_mode = false
+caret_blink = true
 
 [node name="enterButton" type="Button" parent="BlueStartupScreen/passwordBox" unique_id=879930056]
 layout_mode = 0

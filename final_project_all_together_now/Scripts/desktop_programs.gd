@@ -66,6 +66,16 @@ func _on_enter_button_pressed():
 		await get_tree().create_timer(.25).timeout 
 		$BlueStartupScreen/passwordBox.add_theme_color_override("background_color", Color(0, 0, 0, 0))
 
+func _on_final_enter_button_pressed():
+	print("You clicked to submit the last password!")
+	if $passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.text == "Password":
+		get_tree().change_scene_to_file("res://Scenes/success_end_scene.tscn")
+	else: if $passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.text == "password":
+		get_tree().change_scene_to_file("res://Scenes/success_end_scene.tscn")
+	else: 
+		$passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.add_theme_color_override("background_color", "red")
+		await get_tree().create_timer(.25).timeout 
+		$passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal.add_theme_color_override("background_color", Color(0, 0, 0, 0))
 
 func _on_playbutton_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
@@ -84,6 +94,7 @@ func _on_q_1_button_pressed() -> void:
 	if Globals.pressed == 3:
 		$powerSupplyProgram/powerSupplyBkgd/q1Instructions.hide()
 		$powerSupplyProgram/powerSupplyBkgd/q2Instructions.show()
+		
 
 func _on_orange_button_button_down() -> void:
 	Globals.powered = false
@@ -120,3 +131,7 @@ func _on_greenbutton_button_up() -> void:
 	Globals.powered = true
 	Globals.color = ""
 	print("Mouse released - ", Globals.powered, Globals.color)
+
+
+func _on_return_to_menu_pressed():
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
