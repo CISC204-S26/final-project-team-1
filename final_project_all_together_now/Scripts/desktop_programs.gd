@@ -135,3 +135,7 @@ func _on_greenbutton_button_up() -> void:
 
 func _on_return_to_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
+
+func _on_right_turn_pressed() -> void:
+	pass # Replace with function body.

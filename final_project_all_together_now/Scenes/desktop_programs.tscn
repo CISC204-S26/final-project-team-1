@@ -397,6 +397,7 @@ scale = Vector2(0.95, 0.95)
 transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
 
 [node name="passwordsBkgd" type="ColorRect" parent="passwordsProgram" unique_id=1811066314 groups=["Programs"]]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -534,6 +535,39 @@ grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
+[node name="turnInstructions" type="Label" parent="turningProgram/turningBkgd" unique_id=976079852]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -259.0
+offset_top = 100.0
+offset_right = 259.0
+offset_bottom = 140.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 40
+text = "Press to turn the maze! "
+
+[node name="rightTurn" type="Button" parent="turningProgram/turningBkgd/turnInstructions" unique_id=972134191]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 160.0
+offset_right = 100.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="turningProgram/turningBkgd/turnInstructions/rightTurn" unique_id=1949404024]
+position = Vector2(100.26315, 99.47369)
+scale = Vector2(3.0098696, 3.0098684)
+texture = ExtResource("16_230a8")
+
 [node name="filesProgram" type="CanvasLayer" parent="." unique_id=1149314988]
 scale = Vector2(0.95, 0.95)
 transform = Transform2D(0.95, 0, 0, 0.95, 0, 0)
@@ -584,6 +618,17 @@ grow_horizontal = 0
 scale = Vector2(0.4, 0.4)
 icon = ExtResource("9_t45mm")
 
+[node name="lol" type="Label" parent="filesProgram/fileBkgd" unique_id=1456868498]
+layout_mode = 0
+offset_right = 599.7369
+offset_bottom = 593.6842
+theme_override_fonts/font = ExtResource("4_ne0nj")
+theme_override_font_sizes/font_size = 80
+text = "You thought you could find help here? Lol amateur. Git gud"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [connection signal="pressed" from="TextureRect/mapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="TextureRect/powerSupplyButton" to="." method="_on_power_supply_button_pressed"]
 [connection signal="pressed" from="TextureRect/passwordsButton" to="." method="_on_passwords_button_pressed"]
@@ -603,4 +648,5 @@ icon = ExtResource("9_t45mm")
 [connection signal="pressed" from="passwordsProgram/passwordsBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="passwordsProgram/passwordsBkgd/enterPassword/passwordBoxFinal/finalEnterButton" to="." method="_on_final_enter_button_pressed"]
 [connection signal="pressed" from="turningProgram/turningBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="turningProgram/turningBkgd/turnInstructions/rightTurn" to="." method="_on_right_turn_pressed"]
 [connection signal="pressed" from="filesProgram/fileBkgd/frame/exitButton" to="." method="_on_exit_button_pressed"]
