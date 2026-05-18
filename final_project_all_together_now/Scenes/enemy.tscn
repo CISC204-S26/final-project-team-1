@@ -14,7 +14,6 @@ radius = 0.36245337
 [node name="Enemy" type="CharacterBody3D" unique_id=1936857878]
 script = ExtResource("1_1f0kj")
 move_speed = 3.0
-sensor_directions = null
 
 [node name="Enemy" type="CollisionShape3D" parent="." unique_id=1436717414]
 shape = SubResource("CapsuleShape3D_4gyqm")
@@ -68,3 +67,4 @@ shape = SubResource("SphereShape3D_afpow")
 
 [connection signal="area_entered" from="EnemyCollisionArea" to="." method="_on_enemy_collision_area_area_entered"]
 [connection signal="area_entered" from="EnemySensorArea" to="." method="_on_enemy_sensor_area_area_entered"]
+[connection signal="area_exited" from="EnemySensorArea" to="." method="_on_enemy_sensor_area_area_exited"]
