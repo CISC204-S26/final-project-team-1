@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bu6unwcfk7rpq" path="res://Scripts/pause.gd" id="1_o80xk"]
 [ext_resource type="VideoStream" uid="uid://bl4uoddfduuhd" path="res://Assets/Video/Old TV static.ogv" id="2_l2mpd"]
+[ext_resource type="FontFile" uid="uid://bn4jfk7jxbleo" path="res://Assets/fonts/chary___.ttf" id="3_5a6ek"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a6ek"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="Pause" type="Control" unique_id=624732853]
 z_index = 15
@@ -11,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_behavior_recursive = 2
 script = ExtResource("1_o80xk")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1410586852]
@@ -20,8 +25,128 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 stream = ExtResource("2_l2mpd")
 volume_db = -80.0
 autoplay = true
 expand = true
 loop = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1438886030]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=753522989]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=106200649]
+layout_mode = 2
+theme_override_constants/separation = 75
+
+[node name="ConnectionLost" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=2142617476]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
+bbcode_enabled = true
+text = "[font=res://Assets/fonts/chary___.ttf][font_size=75]CONNECTION LOST"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reconnect" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1435104736]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_behavior_recursive = 2
+theme_override_fonts/font = ExtResource("3_5a6ek")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
+text = "     -     RECONNECT          "
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=81637145]
+layout_mode = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_right = 150
+
+[node name="Volume" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1666171909]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Master" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume" unique_id=1051745023]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MasterLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Master" unique_id=1839762453]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_5a6ek")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
+text = "MASTER"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterSlider" type="HSlider" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Master" unique_id=1046397202]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_behavior_recursive = 2
+
+[node name="Music" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume" unique_id=2121427373]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MusicLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Music" unique_id=2020475115]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_5a6ek")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
+text = "MUSIC"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/Music" unique_id=2079230190]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_behavior_recursive = 2
+
+[node name="SFX" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume" unique_id=947769470]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="SFXLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/SFX" unique_id=1520848208]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_5a6ek")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
+text = "SFX"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer/Volume/SFX" unique_id=515179721]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_behavior_recursive = 2
+
+[node name="ShutDown" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1924309768]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_behavior_recursive = 2
+theme_override_fonts/font = ExtResource("3_5a6ek")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
+text = "     -     SHUT DOWN          "

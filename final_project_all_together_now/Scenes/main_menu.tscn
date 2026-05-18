@@ -11,12 +11,14 @@
 [ext_resource type="AudioStream" uid="uid://cltq7a88436v" path="res://Assets/Audio/notification-sci-fi-message-alert-epic-stock-media-1-00-05.mp3" id="9_trj04"]
 
 [node name="MainMenu" type="Control" unique_id=613996590]
+z_index = -5
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_n45e2")
 
 [node name="LightRays" type="VideoStreamPlayer" parent="." unique_id=1431733232]
@@ -27,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 stream = ExtResource("1_28flt")
 autoplay = true
 expand = true
@@ -40,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=583879499]
@@ -57,9 +61,11 @@ grow_vertical = 2
 [node name="Chef" type="MarginContainer" parent="MenuAlignment" unique_id=599753317]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
 [node name="MirageMargin" type="MarginContainer" parent="MenuAlignment/Chef" unique_id=508437205]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 75
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 250
@@ -73,11 +79,13 @@ stretch_mode = 5
 
 [node name="ChefMargin" type="MarginContainer" parent="MenuAlignment/Chef" unique_id=437756790]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 400
 
 [node name="Chef" type="TextureRect" parent="MenuAlignment/Chef/ChefMargin" unique_id=957894840]
 modulate = Color(0.75, 0.75, 0.75, 1)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_n45e2")
 expand_mode = 1
 stretch_mode = 5
@@ -85,6 +93,7 @@ stretch_mode = 5
 [node name="ButtonMargin" type="MarginContainer" parent="MenuAlignment" unique_id=935430830]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 196
 theme_override_constants/margin_top = 450
 theme_override_constants/margin_right = 100
@@ -93,6 +102,7 @@ theme_override_constants/margin_bottom = 25
 [node name="Buttons" type="VBoxContainer" parent="MenuAlignment/ButtonMargin" unique_id=913832443]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/separation = 20
 
 [node name="Start" type="Button" parent="MenuAlignment/ButtonMargin/Buttons" unique_id=1789960090]
@@ -123,6 +133,7 @@ offset_top = 240.0
 offset_right = 1251.0
 offset_bottom = 412.0
 size_flags_vertical = 3
+mouse_filter = 2
 bbcode_enabled = true
 text = "[pulse freq=.5 color=GRAY][font=res://Assets/fonts/BLKCHCRY.TTF][font_size=60]Chef Qu[fade]est —[font=res://Assets/fonts/Facon.ttf][font_size=90] [color=crimson]0
 [hr]"
