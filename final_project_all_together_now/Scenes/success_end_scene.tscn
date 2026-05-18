@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dd01d1a6g8ikk"]
+
+[ext_resource type="Script" uid="uid://ckcrt223k4yqo" path="res://Scripts/desktop_programs.gd" id="1_1w6x6"]
+[ext_resource type="Texture2D" uid="uid://c46ajw0c11ren" path="res://Assets/Art/computer visuals/thumbsUpCake.jpg" id="1_qrrpa"]
+[ext_resource type="FontFile" uid="uid://xfhm4sbqqmn1" path="res://Assets/fonts/connection_ii/ConnectionII.otf" id="2_uoab1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uoab1"]
+bg_color = Color(0.7764706, 0.7764706, 0.7764706, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+border_blend = true
+
+[node name="success_end_scene" type="Node" unique_id=533113868]
+script = ExtResource("1_1w6x6")
+
+[node name="congratsCake" type="Sprite2D" parent="." unique_id=1289949268]
+position = Vector2(651, 445)
+texture = ExtResource("1_qrrpa")
+
+[node name="congratsMessage" type="Label" parent="congratsCake" unique_id=758525409]
+offset_left = -528.0
+offset_top = -366.0
+offset_right = 73.0
+offset_bottom = -223.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_uoab1")
+theme_override_font_sizes/font_size = 70
+text = "Congrats! You made it!"
+autowrap_mode = 2
+
+[node name="returnToMenu" type="Button" parent="congratsCake" unique_id=303840879]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1010.0
+offset_top = -814.0
+offset_right = -678.0
+offset_bottom = -758.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_uoab1")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_uoab1")
+text = "Return to Menu"
+
+[connection signal="pressed" from="congratsCake/returnToMenu" to="." method="_on_return_to_menu_pressed"]
