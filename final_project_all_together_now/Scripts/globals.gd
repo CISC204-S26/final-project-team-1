@@ -12,4 +12,6 @@ var powered = true
 var color = ""
 var completed = 0
 
+#Q4
+var unlocked = false
 var game_over = false

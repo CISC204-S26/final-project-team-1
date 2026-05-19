@@ -8,7 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if Globals.unlocked:
+		$TextureRect/passwordsButton.show()
 
 
 func _on_map_button_pressed():
@@ -91,7 +92,7 @@ func _on_q_1_button_pressed() -> void:
 		else:
 			print("ded")
 	print("Left mouse button clicked on the area")
-	if Globals.pressed == 3:
+	if Globals.pressed == 2:
 		$powerSupplyProgram/powerSupplyBkgd/q1Instructions.hide()
 		$powerSupplyProgram/powerSupplyBkgd/q2Instructions.show()
 		

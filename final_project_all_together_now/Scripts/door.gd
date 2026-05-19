@@ -8,5 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Globals.pressed == 3:
+	if Globals.pressed == 2:
 		queue_free()
